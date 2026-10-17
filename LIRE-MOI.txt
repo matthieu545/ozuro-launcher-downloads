@@ -1,0 +1,19 @@
+OZURO LAUNCHER — BÊTA 0.4.33-beta.1
+
+Téléchargement officiel :
+https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.33-beta.1
+
+Fichier : Ozuro-Launcher-0.4.33-beta.1.exe
+Système : Windows 10/11, 64 bits.
+
+Fermer l’ancienne version du launcher, puis ouvrir ce fichier portable.
+Choisir un jeu, les modes à installer et le dossier de destination.
+Le fond change automatiquement selon le jeu sélectionné.
+
+Les préférences du launcher restent dans %APPDATA%\FR Launcher.
+Aucun jeu n’est inclus dans l’EXE. Les téléchargements dépendent de la
+disponibilité des sources et des joueurs qui partagent les fichiers.
+Les composants Microsoft manquants peuvent demander une autorisation Windows.
+
+Il s’agit d’une version bêta destinée aux tests.
+SHA256SUMS.txt contient l’empreinte du fichier publié.
