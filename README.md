@@ -4,9 +4,9 @@ Launcher Windows en français, aux couleurs bleu, blanc, rouge.
 
 ## Télécharger
 
-[Télécharger Ozuro Launcher 0.4.34-beta.1 pour Windows](https://github.com/matthieu545/ozuro-launcher-downloads/releases/download/v0.4.34-beta.1/Ozuro-Launcher-0.4.34-beta.1.exe).
+[Télécharger Ozuro Launcher 0.4.35-beta.1 pour Windows](https://github.com/matthieu545/ozuro-launcher-downloads/releases/download/v0.4.35-beta.1/Ozuro-Launcher-0.4.35-beta.1.exe).
 
-**Version bêta — destinée aux tests.** Le fichier portable suffit ; aucun jeu n’est inclus dans l’EXE. La [page de cette préversion](https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.34-beta.1) contient l’EXE, sa notice et son empreinte SHA-256. Les versions précédentes restent disponibles dans [Releases](https://github.com/matthieu545/ozuro-launcher-downloads/releases).
+**Version bêta — destinée aux tests.** Le fichier portable suffit ; aucun jeu n’est inclus dans l’EXE. La [page de cette préversion](https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.35-beta.1) contient l’EXE, sa notice et son empreinte SHA-256. Les versions précédentes restent disponibles dans [Releases](https://github.com/matthieu545/ozuro-launcher-downloads/releases).
 
 ![Ozuro Launcher Bêta — Launcher anglais](docs/images/launcher.png)
 
@@ -19,16 +19,23 @@ Launcher Windows en français, aux couleurs bleu, blanc, rouge.
 
 Les téléchargements dépendent de la disponibilité des sources et des joueurs qui partagent les fichiers. Les prérequis Microsoft manquants sont détectés par le launcher ; Windows peut demander une autorisation pour les installer.
 
-## Version 0.4.34-beta.1
+## Version 0.4.35-beta.1
 
 - Badge **BÊTA** dans Ozuro Launcher.
-- Onglet « Launcher anglais » pour installer et ouvrir CB Launcher depuis CBServers.
-- Progression, annulation et nouvelle tentative en cas d’erreur.
+- Réparations MW2/MW3 et ajouts de modes conservant les réglages du joueur.
+- Vérification SHA-256 des fichiers Drive avant installation, avec les 94 références COD2 embarquées.
+- Electron 44.9.0, validation de l’intégrité ASAR et fonctions d’injection Node désactivées.
+- Dépendances npm sans vulnérabilité signalée lors de cette publication.
+- Onglet « Launcher anglais » conservé, pour installer et ouvrir CB Launcher depuis CBServers.
 - Fond illustré conservé ; photos des jeux désactivées.
 - Identité bleu, blanc, rouge conservée.
 - Bibliothèque et réglages des versions FR Launcher conservés.
 
 Pour remplacer une ancienne version, fermer l’ancien launcher avant d’ouvrir le nouveau. Les préférences restent dans le dossier historique `%APPDATA%\FR Launcher`.
+
+Les anciennes sources Drive personnalisées sans manifeste SHA-256 sont désormais refusées. Les torrents intégrés conservent leurs sources et leurs choix de modes.
+
+**Limites restantes :** le tracker actuel utilise HTTP et une clé commune ; une identification individuelle et HTTPS restent à déployer. L’EXE n’est pas signé, faute de certificat d’éditeur. Le contrôle du launcher ne certifie pas tous les EXE/DLL des jeux. Voir [les détails de sécurité](SECURITE.md).
 
 ## Vérifier le fichier
 

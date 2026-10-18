@@ -1,21 +1,18 @@
-OZURO LAUNCHER — BÊTA 0.4.34-beta.1
+OZURO LAUNCHER — BÊTA 0.4.35-beta.1
+
+Ouvrir Ozuro-Launcher-0.4.35-beta.1.exe sur Windows 10/11 x64.
+Fermer l’ancien launcher avant d’utiliser cette version. Le fichier portable suffit.
+Les préférences et jeux déjà reconnus restent dans le profil historique du launcher.
+
+Corrections : réglages MW2/MW3 préservés pendant les réparations, contrôle SHA-256 des fichiers Drive, Electron 44.9.0 et durcissement ASAR/Node.
+Les 94 références COD2 sont embarquées. Les sources Drive personnalisées sans manifeste SHA-256 sont refusées.
+L’onglet Launcher anglais, le badge BÊTA, le fond illustré et les couleurs françaises sont conservés.
+
+Limites : le tracker de production reste en HTTP avec une clé commune. HTTPS et l’identification individuelle restent à déployer. L’EXE est toujours non signé, faute de certificat Authenticode d’éditeur.
+Le contrôle du launcher ne certifie pas chaque EXE/DLL des jeux téléchargés.
+
+157 cas de test distincts et 229 contrôles de l’interface compilée validés. Aucun vrai jeu lancé pendant ces essais.
 
 Téléchargement officiel :
-https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.34-beta.1
-
-Fichier : Ozuro-Launcher-0.4.34-beta.1.exe
-Système : Windows 10/11, 64 bits.
-
-Fermer l’ancienne version du launcher, puis ouvrir ce fichier portable.
-Choisir un jeu, les modes à installer et le dossier de destination.
-Onglet « Launcher anglais » : cliquer sur Installer CB Launcher, puis Ouvrir CB Launcher.
-CB Launcher est téléchargé séparément depuis le dépôt CBServers sur GitHub.
-Le fond illustré est conservé ; les photos des jeux restent désactivées.
-
-Les préférences du launcher restent dans %APPDATA%\FR Launcher.
-Aucun jeu n’est inclus dans l’EXE. Les téléchargements dépendent de la
-disponibilité des sources et des joueurs qui partagent les fichiers.
-Les composants Microsoft manquants peuvent demander une autorisation Windows.
-
-Il s’agit d’une version bêta destinée aux tests.
-SHA256SUMS.txt contient l’empreinte du fichier publié.
+https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.35-beta.1
+Empreinte : SHA256SUMS.txt. Détails : SECURITE.md dans le dépôt public.
