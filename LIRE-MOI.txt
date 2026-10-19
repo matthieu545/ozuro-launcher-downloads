@@ -1,17 +1,24 @@
-OZURO LAUNCHER — BÊTA 0.4.36-beta.1
+OZURO LAUNCHER — BÊTA 0.4.46-beta.1
 
-Fermer l'ancien launcher, puis ouvrir Ozuro-Launcher-0.4.36-beta.1.exe sur Windows 10/11 x64.
-Le fichier portable suffit. Les préférences et jeux reconnus sont conservés.
+Fermer l'ancien launcher, puis ouvrir Ozuro-Launcher-0.4.46-beta.1.exe sur Windows 10/11 x64.
+Le fichier portable suffit. Les préférences et les jeux reconnus sont conservés.
 
-Nouveau : tracker HTTPS sur Cloudflare Workers. Les 11 torrents privés conservent leurs fichiers, caches et modes. Les anciennes annonces HTTP ont été arrêtées : utiliser cette version.
-Le badge BÊTA, l'onglet Launcher anglais, le fond illustré et les couleurs françaises sont conservés.
-Les protections des réglages MW2/MW3, les manifestes Drive SHA-256 et le durcissement Electron/ASAR restent actifs.
+NOUVEAUTÉS DEPUIS LA 0.4.36
 
-Limites : clé commune extractible, absence d'identification individuelle, quotas Cloudflare et tracker IPv4 uniquement. Les transferts restent directs entre participants, qui voient l'adresse de sortie de leur client torrent. L'EXE reste non signé Authenticode.
-Les contrôles du launcher ne certifient pas chaque EXE/DLL des jeux téléchargés.
+- Bibliothèque avec jaquettes haute définition, recherche et filtres. Les jeux à installer sont grisés ; les jeux installés ont un voile bleu, blanc, rouge et un contour bleu au survol.
+- Choix des modes disponibles lors de l'installation et possibilité de retirer un mode pour récupérer de l'espace, tout en conservant les fichiers partagés et personnels. La campagne de Call of Duty 4 est proposée séparément du multijoueur.
+- Affichage du volume à télécharger et de l'espace disque disponible dans le dossier choisi.
+- Détection automatique d'une source qBittorrent sur le même PC.
+- Partage torrent après installation, activé par défaut pour les nouveaux profils. Un choix existant est conservé ; l'option peut être désactivée dans Paramètres et le partage arrêté par jeu dans Téléchargements. Le launcher doit rester ouvert ou réduit ; sa fermeture arrête ses partages.
+- Onglet Discord avec lien vers la communauté et estimations des membres et membres en ligne, actualisées chaque minute.
+- Compteur des téléchargements Windows du launcher et petites vignettes par jeu pour les installations terminées signalées depuis la 0.4.45. Les réparations ne recomptent pas la même installation ; les anciens téléchargements des jeux ne sont pas reconstitués.
+- Nom complet « Ozuro Launcher » dans les actualités et le total ; vignette MW3 « IW5 / IW5-MOD ».
 
-165 tests du launcher, 5 tests du Worker et 229 contrôles de l'interface compilée validés. Aucun vrai jeu lancé pendant ces essais.
+Le tracker fonctionne en HTTPS sur Cloudflare Workers. Les transferts restent directs entre participants.
+Les limites et le fonctionnement des compteurs sont détaillés dans SECURITE.md.
+
+Validation : 186 tests du launcher et 8 tests du service serveur réussis sur la 0.4.45, suivis de 4 tests ciblés et 277 contrôles de l'interface compilée sur cette 0.4.46. Le paquet correspond aux sources vérifiées ; les fuses Electron sont contrôlés. Aucun vrai jeu lancé pendant ces essais. Le résultat en jeu et un transfert entre deux réseaux distincts restent des vérifications séparées.
 
 Téléchargement officiel :
-https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.36-beta.1
-Empreinte : SHA256SUMS.txt. Détails : SECURITE.md dans le dépôt public.
+https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.46-beta.1
+Empreinte : SHA256SUMS.txt.
