@@ -1,9 +1,13 @@
-OZURO LAUNCHER — BÊTA 0.4.47-beta.1
+OZURO LAUNCHER — BÊTA 0.4.48-beta.1
 
-Fermer l'ancien launcher, puis ouvrir Ozuro-Launcher-0.4.47-beta.1.exe sur Windows 10/11 x64.
+Fermer l'ancien launcher, puis ouvrir Ozuro-Launcher-0.4.48-beta.1.exe sur Windows 10/11 x64.
 Le fichier portable suffit. Les préférences et les jeux reconnus sont conservés.
 
-NOUVEAUTÉ 0.4.47 : MISES À JOUR AUTOMATIQUES
+NOUVEAUTÉ 0.4.48 : CONNEXION AU TRACKER PRIVÉ
+
+Le moteur torrent utilise IPv4 pour le tracker privé actuel afin d’éviter un rejet des annonces provenant d’un réseau IPv6. Le VPN et les réglages réseau ne sont pas modifiés. Ce correctif ne crée pas de connexion entrante sur un VPN qui ne propose pas cette fonction ; une source doit rester joignable pour recevoir des fichiers.
+
+MISES À JOUR AUTOMATIQUES DEPUIS LA 0.4.47
 
 Installer cette version une dernière fois manuellement. Les prochaines mises à jour du launcher seront détectées et téléchargées à chaque lancement, puis appliquées automatiquement. Si une installation ou un lancement de jeu a commencé, le redémarrage attend le prochain lancement du launcher ou le bouton Installer et redémarrer. Les jeux et les réglages sont conservés.
 
@@ -21,8 +25,8 @@ AUTRES NOUVEAUTÉS DEPUIS LA 0.4.36
 Le tracker fonctionne en HTTPS sur Cloudflare Workers. Les transferts restent directs entre participants.
 Les limites et le fonctionnement des compteurs sont détaillés dans SECURITE.md.
 
-Validation : 199 tests de la suite complète, 4 tests Windows ciblés du remplacement et du retour arrière, et 281 contrôles de l’interface compilée réussis. Un vrai EXE portable a été remplacé et relancé dans un profil isolé, avec métadonnées simulées. Aucun jeu lancé.
+Validation de ce correctif : 2 tests torrent avec le moteur réel et 281 contrôles de l’interface compilée. Les vérifications de remplacement automatique et de retour arrière de la 0.4.47 restent applicables. Aucun transfert entre deux réseaux distincts n’est certifié par cette publication.
 
 Téléchargement officiel :
-https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.47-beta.1
+https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.48-beta.1
 Empreinte : SHA256SUMS.txt.

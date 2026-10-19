@@ -1,4 +1,4 @@
-# Sécurité de la bêta 0.4.47-beta.1
+# Sécurité de la bêta 0.4.48-beta.1
 
 ## Mise à jour automatique de l’application
 
@@ -7,6 +7,10 @@
 Un helper compilé localement attend la fermeture du launcher et de son parent portable, vérifie les empreintes et remplace seulement l’EXE à son emplacement. Une copie .previous.exe est conservée. Le nouveau launcher confirme son démarrage ; en cas d’échec, le helper tente de restaurer et de relancer la version précédente. Un fichier verrouillé ou un dossier non modifiable ne déclenche pas d’élévation. Un échec déjà constaté n’est pas retenté automatiquement à chaque lancement. Les profils, jeux et sources ne sont pas remplacés.
 
 Les utilisateurs de la 0.4.46 et des versions antérieures doivent installer cette version manuellement une dernière fois.
+
+## Correctif du tracker en 0.4.48
+
+Les annonces HTTP(S) privées du moteur aria2 utilisent IPv4 et un délai de connexion borné, conformément au tracker actuel. La 0.4.47 détecte automatiquement cette mise à jour au lancement. Une connexion au tracker réussie ne garantit pas que deux clients puissent établir une connexion directe : un NAT ou un VPN sans port entrant peut encore empêcher le transfert.
 
 ## Torrent et conservation des fichiers
 
