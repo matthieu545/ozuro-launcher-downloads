@@ -1,9 +1,15 @@
-OZURO LAUNCHER — BÊTA 0.4.49-beta.1
+OZURO LAUNCHER — BÊTA 0.4.50-beta.1
 
-Fermer l'ancien launcher, puis ouvrir Ozuro-Launcher-0.4.49-beta.1.exe sur Windows 10/11 x64.
+Fermer l'ancien launcher, puis ouvrir Ozuro-Launcher-0.4.50-beta.1.exe sur Windows 10/11 x64.
 Le fichier portable suffit. Les préférences et les jeux reconnus sont conservés.
 
-NOUVEAUTÉ 0.4.49 : CORRECTION DES MISES À JOUR
+NOUVEAUTÉ 0.4.50 : PARTAGE INDÉPENDANT
+
+Le moteur Ozuro Partage continue d’envoyer les fichiers du cache après fermeture ou arrêt forcé du launcher. Pour l’arrêter : Paramètres → Arrêter le moteur de partage, ou clic droit sur son icône près de l’horloge → Arrêter le partage et quitter. Les téléchargements en cours restent dans le launcher. Terminer le moteur ou son arbre de processus arrête le partage. Le PC doit rester allumé et connecté ; aucun démarrage automatique avec Windows n’est ajouté. Le moteur conserve une copie de son runtime dans le profil utilisateur pour fonctionner après la fermeture de l’EXE portable.
+
+La limite par défaut des nouveaux profils est de 5 Mo/s par jeu. Les limites existantes et les partages déjà désactivés restent inchangés.
+
+CORRECTION 0.4.49 : MISES À JOUR
 
 L’erreur « Redirect was cancelled » est corrigée. Les utilisateurs de la 0.4.47 ou 0.4.48 doivent fermer l’ancien launcher puis ouvrir une fois ce nouvel EXE manuellement. Réessayer dans ces anciennes versions ne peut pas installer ce correctif. Les mises à jour suivantes utilisent le mécanisme corrigé.
 
@@ -21,7 +27,7 @@ AUTRES NOUVEAUTÉS DEPUIS LA 0.4.36
 - Choix des modes disponibles lors de l'installation et possibilité de retirer un mode pour récupérer de l'espace, tout en conservant les fichiers partagés et personnels. La campagne de Call of Duty 4 est proposée séparément du multijoueur.
 - Affichage du volume à télécharger et de l'espace disque disponible dans le dossier choisi.
 - Détection automatique d'une source qBittorrent sur le même PC.
-- Partage torrent après installation, activé par défaut pour les nouveaux profils. Un choix existant est conservé ; l'option peut être désactivée dans Paramètres et le partage arrêté par jeu dans Téléchargements. Le launcher doit rester ouvert ou réduit ; sa fermeture arrête ses partages.
+- Partage torrent après installation, activé par défaut pour les nouveaux profils. Un choix existant est conservé ; l'option peut être désactivée dans Paramètres et le partage arrêté par jeu dans Téléchargements. Le moteur indépendant garde une icône près de l’horloge et continue après fermeture du launcher.
 - Onglet Discord avec lien vers la communauté et estimations des membres et membres en ligne, actualisées chaque minute.
 - Compteur des téléchargements Windows du launcher et petites vignettes par jeu pour les installations terminées signalées depuis la 0.4.45. Les réparations ne recomptent pas la même installation ; les anciens téléchargements des jeux ne sont pas reconstitués.
 - Nom complet « Ozuro Launcher » dans les actualités et le total ; vignette MW3 « IW5 / IW5-MOD ».
@@ -29,8 +35,8 @@ AUTRES NOUVEAUTÉS DEPUIS LA 0.4.36
 Le tracker fonctionne en HTTPS sur Cloudflare Workers. Les transferts restent directs entre participants.
 Les limites et le fonctionnement des compteurs sont détaillés dans SECURITE.md.
 
-Validation : 201 tests automatisés réussis, dont les annulations et redirections avec Electron réel, et 281 contrôles de l’interface compilée. Un vrai EXE portable a été remplacé puis redémarré avec conservation de son profil de test. Le téléchargement GitHub réel est vérifié par taille et SHA-256. Aucun transfert de jeu entre deux réseaux distincts n’est certifié par cette publication.
+Validation : 205 tests automatisés et 284 contrôles de l’interface compilée réussis. Le moteur compilé a continué un vrai transfert local après arrêt forcé du launcher, puis a été arrêté par sa commande dédiée. Le remplacement et le redémarrage de l’EXE portable sont vérifiés. Un transfert entre deux réseaux distincts dépend toujours de leur connectivité.
 
 Téléchargement officiel :
-https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.49-beta.1
+https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.50-beta.1
 Empreinte : SHA256SUMS.txt.

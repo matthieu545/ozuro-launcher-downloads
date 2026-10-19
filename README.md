@@ -4,11 +4,11 @@ Launcher Windows en français, aux couleurs bleu, blanc, rouge.
 
 ## Télécharger
 
-[Télécharger Ozuro Launcher 0.4.49-beta.1 pour Windows](https://github.com/matthieu545/ozuro-launcher-downloads/releases/download/v0.4.49-beta.1/Ozuro-Launcher-0.4.49-beta.1.exe).
+[Télécharger Ozuro Launcher 0.4.50-beta.1 pour Windows](https://github.com/matthieu545/ozuro-launcher-downloads/releases/download/v0.4.50-beta.1/Ozuro-Launcher-0.4.50-beta.1.exe).
 
-**Version bêta — destinée aux tests.** Le fichier portable suffit ; aucun jeu n'est inclus dans l'EXE. La [page de cette préversion](https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.49-beta.1) contient l'EXE, sa notice et son empreinte SHA-256. Les versions précédentes restent dans [Releases](https://github.com/matthieu545/ozuro-launcher-downloads/releases).
+**Version bêta — destinée aux tests.** Le fichier portable suffit ; aucun jeu n'est inclus dans l'EXE. La [page de cette préversion](https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.50-beta.1) contient l'EXE, sa notice et son empreinte SHA-256. Les versions précédentes restent dans [Releases](https://github.com/matthieu545/ozuro-launcher-downloads/releases).
 
-![Bibliothèque Ozuro Launcher 0.4.49-beta.1](docs/images/launcher.png)
+![Bibliothèque Ozuro Launcher 0.4.50-beta.1](docs/images/launcher.png)
 
 ## Utiliser
 
@@ -21,6 +21,9 @@ Les préférences restent dans le dossier historique **%APPDATA%\FR Launcher** e
 
 ## Nouveautés depuis la 0.4.36
 
+- Moteur Ozuro Partage indépendant : les fichiers déjà installés continuent d’être partagés après fermeture ou arrêt forcé du launcher. L’icône près de l’horloge et le bouton des paramètres permettent de l’arrêter.
+- Nouvelle limite par défaut de 5 Mo/s par jeu ; les réglages existants sont conservés.
+
 - Correction de « Redirect was cancelled » lors de la mise à jour : les redirections GitHub sont suivies après validation de chaque destination.
 
 - Correctif de connexion au tracker privé : les annonces du moteur torrent passent en IPv4, le protocole accepté par le tracker actuel.
@@ -29,7 +32,7 @@ Les préférences restent dans le dossier historique **%APPDATA%\FR Launcher** e
 - Choix des modes disponibles lors de l'installation et possibilité de retirer un mode pour récupérer de l'espace, tout en conservant les fichiers partagés et personnels. La campagne de Call of Duty 4 est proposée séparément du multijoueur.
 - Affichage du volume à télécharger et de l'espace disque disponible dans le dossier choisi.
 - Détection automatique d'une source qBittorrent sur le même PC.
-- Partage torrent après installation, activé par défaut pour les nouveaux profils. Un choix existant est conservé ; l'option peut être désactivée dans Paramètres et le partage arrêté par jeu dans Téléchargements. Le launcher doit rester ouvert ou réduit ; sa fermeture arrête ses partages.
+- Partage torrent après installation, activé par défaut pour les nouveaux profils. Un choix existant est conservé ; l'option peut être désactivée dans Paramètres et le partage arrêté par jeu dans Téléchargements. Le moteur indépendant garde une icône près de l’horloge et continue après fermeture du launcher.
 - Onglet Discord avec lien vers la communauté et estimations des membres et membres en ligne, actualisées chaque minute.
 - Compteur des téléchargements Windows du launcher et petites vignettes par jeu pour les installations terminées signalées depuis la 0.4.45. Les réparations ne recomptent pas la même installation ; les anciens téléchargements des jeux ne sont pas reconstitués.
 - Nom complet « Ozuro Launcher » dans les actualités et le total ; vignette MW3 « IW5 / IW5-MOD ».
