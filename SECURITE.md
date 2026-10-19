@@ -1,4 +1,12 @@
-# Sécurité de la bêta 0.4.46-beta.1
+# Sécurité de la bêta 0.4.47-beta.1
+
+## Mise à jour automatique de l’application
+
+À chaque démarrage, le launcher portable consulte les versions du seul dépôt officiel. Les brouillons et les versions plus anciennes sont ignorés. Les préversions sont acceptées pour les utilisateurs de la bêta ; une version stable ne bascule pas automatiquement vers une bêta. Le téléchargement exige une origine GitHub HTTPS autorisée, une taille attendue et une empreinte SHA-256 publiée par GitHub. Le fichier est également contrôlé comme EXE Windows.
+
+Un helper compilé localement attend la fermeture du launcher et de son parent portable, vérifie les empreintes et remplace seulement l’EXE à son emplacement. Une copie .previous.exe est conservée. Le nouveau launcher confirme son démarrage ; en cas d’échec, le helper tente de restaurer et de relancer la version précédente. Un fichier verrouillé ou un dossier non modifiable ne déclenche pas d’élévation. Un échec déjà constaté n’est pas retenté automatiquement à chaque lancement. Les profils, jeux et sources ne sont pas remplacés.
+
+Les utilisateurs de la 0.4.46 et des versions antérieures doivent installer cette version manuellement une dernière fois.
 
 ## Torrent et conservation des fichiers
 
@@ -16,8 +24,8 @@ Les compteurs par jeu reçoivent uniquement l'identifiant du jeu et un identifia
 
 ## Validation et limites
 
-- 186 tests du launcher et 8 tests serveur ont réussi pour la 0.4.45. Les changements de texte de cette version ont passé 4 tests ciblés ; ses 277 contrôles d'interface compilée passent également.
-- Les 59 fichiers intégrés contrôlés correspondent aux sources ; l'intégrité ASAR et les fuses Electron sont vérifiés. Les fonctions d'injection Node restent désactivées.
+- 199 tests de la suite complète passent, ainsi que 4 tests Windows ciblés et 281 contrôles de l’interface compilée. Le remplacement et le redémarrage d’un vrai EXE portable ont été vérifiés avec un profil isolé et des métadonnées simulées.
+- Les 62 fichiers intégrés contrôlés correspondent aux sources ; l'intégrité ASAR et les fuses Electron sont vérifiés. Les fonctions d'injection Node restent désactivées.
 - L'EXE est non signé Authenticode. Son empreinte SHA-256 vérifie les octets téléchargés ; elle ne remplace pas une signature Windows ni une source de confiance.
 - Les quotas et la disponibilité des fournisseurs peuvent interrompre le tracker ou les compteurs. Le tracker gère IPv4.
 - Ces contrôles concernent le launcher ; ils ne certifient pas chaque jeu, DLL, mod ou mise à jour tierce. Aucun vrai jeu n'a été exécuté pendant ces essais et aucun transfert entre deux réseaux distincts n'est certifié par cette publication.

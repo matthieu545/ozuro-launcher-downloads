@@ -1,9 +1,13 @@
-OZURO LAUNCHER — BÊTA 0.4.46-beta.1
+OZURO LAUNCHER — BÊTA 0.4.47-beta.1
 
-Fermer l'ancien launcher, puis ouvrir Ozuro-Launcher-0.4.46-beta.1.exe sur Windows 10/11 x64.
+Fermer l'ancien launcher, puis ouvrir Ozuro-Launcher-0.4.47-beta.1.exe sur Windows 10/11 x64.
 Le fichier portable suffit. Les préférences et les jeux reconnus sont conservés.
 
-NOUVEAUTÉS DEPUIS LA 0.4.36
+NOUVEAUTÉ 0.4.47 : MISES À JOUR AUTOMATIQUES
+
+Installer cette version une dernière fois manuellement. Les prochaines mises à jour du launcher seront détectées et téléchargées à chaque lancement, puis appliquées automatiquement. Si une installation ou un lancement de jeu a commencé, le redémarrage attend le prochain lancement du launcher ou le bouton Installer et redémarrer. Les jeux et les réglages sont conservés.
+
+AUTRES NOUVEAUTÉS DEPUIS LA 0.4.36
 
 - Bibliothèque avec jaquettes haute définition, recherche et filtres. Les jeux à installer sont grisés ; les jeux installés ont un voile bleu, blanc, rouge et un contour bleu au survol.
 - Choix des modes disponibles lors de l'installation et possibilité de retirer un mode pour récupérer de l'espace, tout en conservant les fichiers partagés et personnels. La campagne de Call of Duty 4 est proposée séparément du multijoueur.
@@ -17,8 +21,8 @@ NOUVEAUTÉS DEPUIS LA 0.4.36
 Le tracker fonctionne en HTTPS sur Cloudflare Workers. Les transferts restent directs entre participants.
 Les limites et le fonctionnement des compteurs sont détaillés dans SECURITE.md.
 
-Validation : 186 tests du launcher et 8 tests du service serveur réussis sur la 0.4.45, suivis de 4 tests ciblés et 277 contrôles de l'interface compilée sur cette 0.4.46. Le paquet correspond aux sources vérifiées ; les fuses Electron sont contrôlés. Aucun vrai jeu lancé pendant ces essais. Le résultat en jeu et un transfert entre deux réseaux distincts restent des vérifications séparées.
+Validation : 199 tests de la suite complète, 4 tests Windows ciblés du remplacement et du retour arrière, et 281 contrôles de l’interface compilée réussis. Un vrai EXE portable a été remplacé et relancé dans un profil isolé, avec métadonnées simulées. Aucun jeu lancé.
 
 Téléchargement officiel :
-https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.46-beta.1
+https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.47-beta.1
 Empreinte : SHA256SUMS.txt.

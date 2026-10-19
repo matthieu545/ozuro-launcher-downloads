@@ -4,11 +4,11 @@ Launcher Windows en français, aux couleurs bleu, blanc, rouge.
 
 ## Télécharger
 
-[Télécharger Ozuro Launcher 0.4.46-beta.1 pour Windows](https://github.com/matthieu545/ozuro-launcher-downloads/releases/download/v0.4.46-beta.1/Ozuro-Launcher-0.4.46-beta.1.exe).
+[Télécharger Ozuro Launcher 0.4.47-beta.1 pour Windows](https://github.com/matthieu545/ozuro-launcher-downloads/releases/download/v0.4.47-beta.1/Ozuro-Launcher-0.4.47-beta.1.exe).
 
-**Version bêta — destinée aux tests.** Le fichier portable suffit ; aucun jeu n'est inclus dans l'EXE. La [page de cette préversion](https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.46-beta.1) contient l'EXE, sa notice et son empreinte SHA-256. Les versions précédentes restent dans [Releases](https://github.com/matthieu545/ozuro-launcher-downloads/releases).
+**Version bêta — destinée aux tests.** Le fichier portable suffit ; aucun jeu n'est inclus dans l'EXE. La [page de cette préversion](https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.47-beta.1) contient l'EXE, sa notice et son empreinte SHA-256. Les versions précédentes restent dans [Releases](https://github.com/matthieu545/ozuro-launcher-downloads/releases).
 
-![Bibliothèque Ozuro Launcher 0.4.46-beta.1](docs/images/launcher.png)
+![Bibliothèque Ozuro Launcher 0.4.47-beta.1](docs/images/launcher.png)
 
 ## Utiliser
 
@@ -21,6 +21,7 @@ Les préférences restent dans le dossier historique **%APPDATA%\FR Launcher** e
 
 ## Nouveautés depuis la 0.4.36
 
+- Mises à jour automatiques du launcher au démarrage : téléchargement depuis le dépôt officiel, vérification SHA-256 et redémarrage automatique. Les jeux et les réglages sont conservés. Les utilisateurs de la 0.4.46 et des versions précédentes doivent installer manuellement cette version une dernière fois.
 - Bibliothèque avec jaquettes haute définition, recherche et filtres. Les jeux à installer sont grisés ; les jeux installés ont un voile bleu, blanc, rouge et un contour bleu au survol.
 - Choix des modes disponibles lors de l'installation et possibilité de retirer un mode pour récupérer de l'espace, tout en conservant les fichiers partagés et personnels. La campagne de Call of Duty 4 est proposée séparément du multijoueur.
 - Affichage du volume à télécharger et de l'espace disque disponible dans le dossier choisi.
