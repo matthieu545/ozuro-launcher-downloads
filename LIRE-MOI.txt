@@ -1,13 +1,17 @@
-OZURO LAUNCHER — BÊTA 0.4.50-beta.1
+OZURO LAUNCHER — BÊTA 0.4.51-beta.1
 
-Fermer l'ancien launcher, puis ouvrir Ozuro-Launcher-0.4.50-beta.1.exe sur Windows 10/11 x64.
+Fermer l'ancien launcher, puis ouvrir Ozuro-Launcher-0.4.51-beta.1.exe sur Windows 10/11 x64.
 Le fichier portable suffit. Les préférences et les jeux reconnus sont conservés.
 
-NOUVEAUTÉ 0.4.50 : PARTAGE INDÉPENDANT
+NOUVEAUTÉ 0.4.51 : ENVOI ILLIMITÉ
+
+Le nouveau réglage Illimité utilise le débit disponible, pendant les téléchargements torrent et pour le partage après installation. Les choix de débit sont conservés après redémarrage. Le moteur indépendant continue de fonctionner après fermeture du launcher.
+
+FONCTION 0.4.50 : PARTAGE INDÉPENDANT
 
 Le moteur Ozuro Partage continue d’envoyer les fichiers du cache après fermeture ou arrêt forcé du launcher. Pour l’arrêter : Paramètres → Arrêter le moteur de partage, ou clic droit sur son icône près de l’horloge → Arrêter le partage et quitter. Les téléchargements en cours restent dans le launcher. Terminer le moteur ou son arbre de processus arrête le partage. Le PC doit rester allumé et connecté ; aucun démarrage automatique avec Windows n’est ajouté. Le moteur conserve une copie de son runtime dans le profil utilisateur pour fonctionner après la fermeture de l’EXE portable.
 
-La limite par défaut des nouveaux profils est de 5 Mo/s par jeu. Les limites existantes et les partages déjà désactivés restent inchangés.
+L’envoi est illimité par défaut pour les nouveaux profils. Les limites existantes et les partages déjà désactivés restent inchangés. Dans les paramètres, Illimité retire le plafond ; 256 Ko/s, 1 Mo/s et 5 Mo/s restent disponibles.
 
 CORRECTION 0.4.49 : MISES À JOUR
 
@@ -35,8 +39,8 @@ AUTRES NOUVEAUTÉS DEPUIS LA 0.4.36
 Le tracker fonctionne en HTTPS sur Cloudflare Workers. Les transferts restent directs entre participants.
 Les limites et le fonctionnement des compteurs sont détaillés dans SECURITE.md.
 
-Validation : 205 tests automatisés et 284 contrôles de l’interface compilée réussis. Le moteur compilé a continué un vrai transfert local après arrêt forcé du launcher, puis a été arrêté par sa commande dédiée. Le remplacement et le redémarrage de l’EXE portable sont vérifiés. Un transfert entre deux réseaux distincts dépend toujours de leur connectivité.
+Validation du changement : 9 tests ciblés, un transfert local avec le moteur Windows compilé après arrêt forcé du launcher, et 286 contrôles de l’interface réussis. Les essais vérifient la valeur Illimité, le retour à une limite choisie et leur enregistrement. Le remplacement et le redémarrage du vrai EXE portable restent vérifiés.
 
 Téléchargement officiel :
-https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.50-beta.1
+https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.51-beta.1
 Empreinte : SHA256SUMS.txt.

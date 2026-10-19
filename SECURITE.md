@@ -1,4 +1,4 @@
-# Sécurité de la bêta 0.4.50-beta.1
+# Sécurité de la bêta 0.4.51-beta.1
 
 ## Mise à jour automatique de l’application
 
@@ -18,6 +18,10 @@ Ozuro Partage est un processus distinct, avec une copie du runtime Electron cont
 
 Fermer le launcher conserve les partages déjà démarrés ; terminer le moteur ou l’ensemble de ses processus les arrête. La réception de jeux reste gérée par le launcher. La veille ou l’arrêt du PC interrompt les échanges.
 
+## Limite d’envoi
+
+Les nouveaux profils utilisent la valeur zéro d’aria2, qui signifie un envoi sans plafond logiciel. Les réglages limités existants et les désactivations sont conservés. Les paramètres permettent de choisir Illimité, 256 Ko/s, 1 Mo/s ou 5 Mo/s. Le débit effectif reste lié à la connexion et aux participants.
+
 ## Torrent et conservation des fichiers
 
 Le tracker est hébergé sur Cloudflare Workers en HTTPS. Il communique les adresses des participants ; les fichiers des jeux ne transitent pas par Workers. Les sources de téléchargement intégrées à l'EXE sont extractibles : une clé commune ne constitue pas une authentification individuelle.
@@ -34,7 +38,7 @@ Les compteurs par jeu reçoivent uniquement l'identifiant du jeu et un identifia
 
 ## Validation et limites
 
-- 205 tests de la suite complète passent, dont les 4 tests du helper Windows et le test avec Electron réel des redirections, du flux et des annulations. Les 284 contrôles de l’interface compilée passent. Le remplacement et le redémarrage du vrai EXE portable sont vérifiés avec un profil isolé ; un téléchargement GitHub réel est vérifié par empreinte.
+- La suite complète de la version précédente comptait 205 tests réussis. Ce changement est vérifié par 9 tests ciblés, un transfert local avec le moteur Windows compilé après arrêt forcé du launcher et 286 contrôles de l’interface. Le remplacement et le redémarrage du vrai EXE portable sont vérifiés avec un profil isolé.
 - Les 65 fichiers intégrés contrôlés correspondent aux sources ; l'intégrité ASAR et les fuses Electron sont vérifiés. Les fonctions d'injection Node restent désactivées.
 - L'EXE est non signé Authenticode. Son empreinte SHA-256 vérifie les octets téléchargés ; elle ne remplace pas une signature Windows ni une source de confiance.
 - Les quotas et la disponibilité des fournisseurs peuvent interrompre le tracker ou les compteurs. Le tracker gère IPv4.
