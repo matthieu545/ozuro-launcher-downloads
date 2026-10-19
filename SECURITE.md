@@ -1,4 +1,4 @@
-# Sécurité de la bêta 0.4.48-beta.1
+# Sécurité de la bêta 0.4.49-beta.1
 
 ## Mise à jour automatique de l’application
 
@@ -6,11 +6,11 @@
 
 Un helper compilé localement attend la fermeture du launcher et de son parent portable, vérifie les empreintes et remplace seulement l’EXE à son emplacement. Une copie .previous.exe est conservée. Le nouveau launcher confirme son démarrage ; en cas d’échec, le helper tente de restaurer et de relancer la version précédente. Un fichier verrouillé ou un dossier non modifiable ne déclenche pas d’élévation. Un échec déjà constaté n’est pas retenté automatiquement à chaque lancement. Les profils, jeux et sources ne sont pas remplacés.
 
-Les utilisateurs de la 0.4.46 et des versions antérieures doivent installer cette version manuellement une dernière fois.
+Les versions jusqu’à 0.4.48 doivent être remplacées manuellement une dernière fois : leur transport Electron refuse les redirections du téléchargement GitHub. La 0.4.49 utilise net.request et valide chaque nouvelle origine avant de la contacter, avec une session en mémoire sans identifiants ni cookies.
 
 ## Correctif du tracker en 0.4.48
 
-Les annonces HTTP(S) privées du moteur aria2 utilisent IPv4 et un délai de connexion borné, conformément au tracker actuel. La 0.4.47 détecte automatiquement cette mise à jour au lancement. Une connexion au tracker réussie ne garantit pas que deux clients puissent établir une connexion directe : un NAT ou un VPN sans port entrant peut encore empêcher le transfert.
+Les annonces HTTP(S) privées du moteur aria2 utilisent IPv4 et un délai de connexion borné, conformément au tracker actuel. Ce correctif reste inclus dans la 0.4.49. Une connexion au tracker réussie ne garantit pas que deux clients puissent établir une connexion directe : un NAT ou un VPN sans port entrant peut encore empêcher le transfert.
 
 ## Torrent et conservation des fichiers
 
@@ -28,8 +28,8 @@ Les compteurs par jeu reçoivent uniquement l'identifiant du jeu et un identifia
 
 ## Validation et limites
 
-- 199 tests de la suite complète passent, ainsi que 4 tests Windows ciblés et 281 contrôles de l’interface compilée. Le remplacement et le redémarrage d’un vrai EXE portable ont été vérifiés avec un profil isolé et des métadonnées simulées.
-- Les 62 fichiers intégrés contrôlés correspondent aux sources ; l'intégrité ASAR et les fuses Electron sont vérifiés. Les fonctions d'injection Node restent désactivées.
+- 201 tests de la suite complète passent, dont les 4 tests du helper Windows et le test avec Electron réel des redirections, du flux et des annulations. Les 281 contrôles de l’interface compilée passent. Le remplacement et le redémarrage du vrai EXE portable sont vérifiés avec un profil isolé ; un téléchargement GitHub réel est vérifié par empreinte.
+- Les 63 fichiers intégrés contrôlés correspondent aux sources ; l'intégrité ASAR et les fuses Electron sont vérifiés. Les fonctions d'injection Node restent désactivées.
 - L'EXE est non signé Authenticode. Son empreinte SHA-256 vérifie les octets téléchargés ; elle ne remplace pas une signature Windows ni une source de confiance.
 - Les quotas et la disponibilité des fournisseurs peuvent interrompre le tracker ou les compteurs. Le tracker gère IPv4.
 - Ces contrôles concernent le launcher ; ils ne certifient pas chaque jeu, DLL, mod ou mise à jour tierce. Aucun vrai jeu n'a été exécuté pendant ces essais et aucun transfert entre deux réseaux distincts n'est certifié par cette publication.
