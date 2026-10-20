@@ -4,11 +4,11 @@ Launcher Windows en français, aux couleurs bleu, blanc, rouge.
 
 ## Télécharger
 
-[Télécharger Ozuro Launcher 0.4.51-beta.1 pour Windows](https://github.com/matthieu545/ozuro-launcher-downloads/releases/download/v0.4.51-beta.1/Ozuro-Launcher-0.4.51-beta.1.exe).
+[Télécharger Ozuro Launcher 0.4.52-beta.1 pour Windows](https://github.com/matthieu545/ozuro-launcher-downloads/releases/download/v0.4.52-beta.1/Ozuro-Launcher-0.4.52-beta.1.exe).
 
-**Version bêta — destinée aux tests.** Le fichier portable suffit ; aucun jeu n'est inclus dans l'EXE. La [page de cette préversion](https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.51-beta.1) contient l'EXE, sa notice et son empreinte SHA-256. Les versions précédentes restent dans [Releases](https://github.com/matthieu545/ozuro-launcher-downloads/releases).
+**Version bêta — destinée aux tests.** Le fichier portable suffit ; aucun jeu n'est inclus dans l'EXE. La [page de cette préversion](https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.52-beta.1) contient l'EXE, sa notice et son empreinte SHA-256. Les versions précédentes restent dans [Releases](https://github.com/matthieu545/ozuro-launcher-downloads/releases).
 
-![Bibliothèque Ozuro Launcher 0.4.51-beta.1](docs/images/launcher.png)
+![Bibliothèque Ozuro Launcher 0.4.52-beta.1](docs/images/launcher.png)
 
 ## Utiliser
 
@@ -20,6 +20,8 @@ Launcher Windows en français, aux couleurs bleu, blanc, rouge.
 Les préférences restent dans le dossier historique **%APPDATA%\FR Launcher** et les jeux déjà installés sont conservés. Les téléchargements dépendent de la disponibilité des sources et des joueurs qui partagent les fichiers. Les prérequis Microsoft manquants sont détectés par le launcher ; Windows peut demander une autorisation pour les installer.
 
 ## Nouveautés depuis la 0.4.36
+
+- Version installée visible en haut, à côté du badge BÊTA.
 
 - Moteur Ozuro Partage indépendant : les fichiers déjà installés continuent d’être partagés après fermeture ou arrêt forcé du launcher. L’icône près de l’horloge et le bouton des paramètres permettent de l’arrêter.
 - Envoi illimité par défaut pour les nouveaux profils. Les limites déjà choisies restent conservées ; l’option Illimité est disponible dans les paramètres.

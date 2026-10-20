@@ -1,4 +1,4 @@
-# Sécurité de la bêta 0.4.51-beta.1
+# Sécurité de la bêta 0.4.52-beta.1
 
 ## Mise à jour automatique de l’application
 
