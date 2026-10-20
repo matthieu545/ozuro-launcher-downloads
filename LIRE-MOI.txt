@@ -1,9 +1,13 @@
-OZURO LAUNCHER — BÊTA 0.4.52-beta.1
+OZURO LAUNCHER — BÊTA 0.4.53-beta.1
 
-Fermer l'ancien launcher, puis ouvrir Ozuro-Launcher-0.4.52-beta.1.exe sur Windows 10/11 x64.
+Fermer l'ancien launcher, puis ouvrir Ozuro-Launcher-0.4.53-beta.1.exe sur Windows 10/11 x64.
 Le fichier portable suffit. Les préférences et les jeux reconnus sont conservés.
 
-NOUVEAUTÉ 0.4.52 : VERSION VISIBLE
+NOUVEAUTÉ 0.4.53 : CLASSEMENT CHRONOLOGIQUE
+
+La bibliothèque affiche les jeux selon leur sortie originale : Call of Duty 2, Call of Duty 3, Call of Duty 4, World at War, Modern Warfare 2, Black Ops, Modern Warfare 3, Black Ops 2, Ghosts, Advanced Warfare, Black Ops 3, Infinite Warfare et Black Ops 4. Les filtres et la recherche conservent cet ordre. Les jeux ajoutés manuellement restent à la suite.
+
+FONCTION 0.4.52 : VERSION VISIBLE
 
 Le numéro de la version ouverte apparaît en haut, à côté du badge BÊTA. Il reste également disponible dans les paramètres et en bas de la barre latérale.
 
@@ -46,5 +50,5 @@ Les limites et le fonctionnement des compteurs sont détaillés dans SECURITE.md
 Validation du changement : 9 tests ciblés, un transfert local avec le moteur Windows compilé après arrêt forcé du launcher, et 286 contrôles de l’interface réussis. Les essais vérifient la valeur Illimité, le retour à une limite choisie et leur enregistrement. Le remplacement et le redémarrage du vrai EXE portable restent vérifiés.
 
 Téléchargement officiel :
-https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.52-beta.1
+https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.53-beta.1
 Empreinte : SHA256SUMS.txt.
