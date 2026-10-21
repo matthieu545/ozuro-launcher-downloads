@@ -1,4 +1,4 @@
-# Sécurité de la bêta 0.4.53-beta.1
+# Sécurité de la bêta 0.4.54-beta.1
 
 ## Mise à jour automatique de l’application
 
@@ -7,6 +7,10 @@
 Un helper compilé localement attend la fermeture du launcher et de son parent portable, vérifie les empreintes et remplace seulement l’EXE à son emplacement. Une copie .previous.exe est conservée. Le nouveau launcher confirme son démarrage ; en cas d’échec, le helper tente de restaurer et de relancer la version précédente. Un fichier verrouillé ou un dossier non modifiable ne déclenche pas d’élévation. Un échec déjà constaté n’est pas retenté automatiquement à chaque lancement. Les profils, jeux et sources ne sont pas remplacés.
 
 Les versions jusqu’à 0.4.48 doivent être remplacées manuellement une dernière fois : leur transport Electron refuse les redirections du téléchargement GitHub. La 0.4.49 utilise net.request et valide chaque nouvelle origine avant de la contacter, avec une session en mémoire sans identifiants ni cookies.
+
+## Récupération du moteur en 0.4.54
+
+Les commandes locales passent directement par 127.0.0.1, sans proxy ni redirection HTTP. Une panne RPC peut provoquer une seule reprise automatique, uniquement après arrêt confirmé du processus précédent. Le cache et les modes sont conservés. Une pause annule la reprise ; un processus encore actif empêche le redémarrage et un nouveau téléchargement dans le même cache à l’intérieur du processus du launcher. Le secours HTTPS exige une configuration explicite associée à l’infohash et une validation TLS ; aucun miroir réel n’est activé.
 
 ## Correctif du tracker en 0.4.48
 
@@ -38,8 +42,8 @@ Les compteurs par jeu reçoivent uniquement l'identifiant du jeu et un identifia
 
 ## Validation et limites
 
-- La suite complète de la version précédente comptait 205 tests réussis. Ce changement est vérifié par 9 tests ciblés, un transfert local avec le moteur Windows compilé après arrêt forcé du launcher et 286 contrôles de l’interface. Le remplacement et le redémarrage du vrai EXE portable sont vérifiés avec un profil isolé.
-- Les 65 fichiers intégrés contrôlés correspondent aux sources ; l'intégrité ASAR et les fuses Electron sont vérifiés. Les fonctions d'injection Node restent désactivées.
+- La suite complète compte 221 tests réussis, 0 échec et 1 test HTTPS public optionnel ignoré. Les cas couvrent la reprise d’un torrent synthétique de 2 102 fichiers, les modes, la pause et les doubles moteurs. 286 contrôles d’interface et le remplacement/redémarrage du vrai EXE portable sont vérifiés avec un profil isolé.
+- Les 66 fichiers intégrés contrôlés correspondent aux sources ; l'intégrité ASAR et les fuses Electron sont vérifiés. Les fonctions d'injection Node restent désactivées.
 - L'EXE est non signé Authenticode. Son empreinte SHA-256 vérifie les octets téléchargés ; elle ne remplace pas une signature Windows ni une source de confiance.
 - Les quotas et la disponibilité des fournisseurs peuvent interrompre le tracker ou les compteurs. Le tracker gère IPv4.
 - Ces contrôles concernent le launcher ; ils ne certifient pas chaque jeu, DLL, mod ou mise à jour tierce. Aucun vrai jeu n'a été exécuté pendant ces essais et aucun transfert entre deux réseaux distincts n'est certifié par cette publication.

@@ -1,54 +1,26 @@
-OZURO LAUNCHER — BÊTA 0.4.53-beta.1
+OZURO LAUNCHER — BÊTA 0.4.54-beta.1
 
-Fermer l'ancien launcher, puis ouvrir Ozuro-Launcher-0.4.53-beta.1.exe sur Windows 10/11 x64.
-Le fichier portable suffit. Les préférences et les jeux reconnus sont conservés.
+Fermer l’ancien launcher puis ouvrir Ozuro-Launcher-0.4.54-beta.1.exe sur Windows 10/11 x64. Les jeux, sources et préférences sont conservés. Les bêta récentes détectent aussi cette version par leur mécanisme de mise à jour au démarrage.
 
-NOUVEAUTÉ 0.4.53 : CLASSEMENT CHRONOLOGIQUE
+TÉLÉCHARGEMENTS TORRENT
 
-La bibliothèque affiche les jeux selon leur sortie originale : Call of Duty 2, Call of Duty 3, Call of Duty 4, World at War, Modern Warfare 2, Black Ops, Modern Warfare 3, Black Ops 2, Ghosts, Advanced Warfare, Black Ops 3, Infinite Warfare et Black Ops 4. Les filtres et la recherche conservent cet ordre. Les jeux ajoutés manuellement restent à la suite.
+Tous les jeux torrent utilisent le moteur intégré : qBittorrent n’est pas nécessaire chez les joueurs. Les annonces HTTP(S) privées passent automatiquement en IPv4. Le propriétaire doit maintenir une source joignable.
 
-FONCTION 0.4.52 : VERSION VISIBLE
+La communication avec le moteur local utilise une connexion IPv4 directe. Si elle reste sans réponse après les tentatives de lecture, Ozuro confirme l’arrêt de l’ancien processus puis tente une seule reprise avec le même cache et les mêmes modes. Une pause demandée par le joueur annule cette reprise. Une panne persistante conserve les fichiers et affiche une erreur ; aucune boucle de relance infinie n’est ajoutée.
 
-Le numéro de la version ouverte apparaît en haut, à côté du badge BÊTA. Il reste également disponible dans les paramètres et en bas de la barre latérale.
+Les grandes sélections de modes demandent moins souvent le détail de chaque fichier. Les informations légères de vitesse et de connexion restent actualisées. Un deuxième moteur du launcher ne peut pas ouvrir le même cache actif dans son processus.
 
-FONCTION 0.4.51 : ENVOI ILLIMITÉ
+Le secours HTTPS est disponible seulement si le propriétaire configure un miroir publié, lié à l’empreinte du torrent. Aucun miroir réel n’est activé dans cette publication.
 
-Le nouveau réglage Illimité utilise le débit disponible, pendant les téléchargements torrent et pour le partage après installation. Les choix de débit sont conservés après redémarrage. Le moteur indépendant continue de fonctionner après fermeture du launcher.
+PARTAGE ET LIMITES
 
-FONCTION 0.4.50 : PARTAGE INDÉPENDANT
+Ozuro Partage continue de partager les caches vérifiés après fermeture du launcher, avec un envoi illimité par défaut pour les nouveaux profils. Les choix existants sont conservés. Le PC doit rester allumé et connecté ; l’icône près de l’horloge permet d’arrêter le partage.
 
-Le moteur Ozuro Partage continue d’envoyer les fichiers du cache après fermeture ou arrêt forcé du launcher. Pour l’arrêter : Paramètres → Arrêter le moteur de partage, ou clic droit sur son icône près de l’horloge → Arrêter le partage et quitter. Les téléchargements en cours restent dans le launcher. Terminer le moteur ou son arbre de processus arrête le partage. Le PC doit rester allumé et connecté ; aucun démarrage automatique avec Windows n’est ajouté. Le moteur conserve une copie de son runtime dans le profil utilisateur pour fonctionner après la fermeture de l’EXE portable.
+VALIDATION
 
-L’envoi est illimité par défaut pour les nouveaux profils. Les limites existantes et les partages déjà désactivés restent inchangés. Dans les paramètres, Illimité retire le plafond ; 256 Ko/s, 1 Mo/s et 5 Mo/s restent disponibles.
+221 tests automatisés réussis, 0 échec et 1 test HTTPS public optionnel ignoré. Les essais incluent un torrent synthétique de 2 102 fichiers, une panne du moteur, la reprise des morceaux reçus, les modes non sélectionnés, la pause et l’absence de doubles moteurs. 286 contrôles d’interface et le remplacement/redémarrage du vrai EXE portable sont vérifiés. Ces essais ne constituent pas une installation complète et un lancement de chacun des 13 vrais jeux.
 
-CORRECTION 0.4.49 : MISES À JOUR
-
-L’erreur « Redirect was cancelled » est corrigée. Les utilisateurs de la 0.4.47 ou 0.4.48 doivent fermer l’ancien launcher puis ouvrir une fois ce nouvel EXE manuellement. Réessayer dans ces anciennes versions ne peut pas installer ce correctif. Les mises à jour suivantes utilisent le mécanisme corrigé.
-
-CORRECTIF 0.4.48 : CONNEXION AU TRACKER PRIVÉ
-
-Le moteur torrent utilise IPv4 pour le tracker privé actuel afin d’éviter un rejet des annonces provenant d’un réseau IPv6. Le VPN et les réglages réseau ne sont pas modifiés. Ce correctif ne crée pas de connexion entrante sur un VPN qui ne propose pas cette fonction ; une source doit rester joignable pour recevoir des fichiers.
-
-MISES À JOUR AUTOMATIQUES DEPUIS LA 0.4.47
-
-Installer cette version une dernière fois manuellement. Les prochaines mises à jour du launcher seront détectées et téléchargées à chaque lancement, puis appliquées automatiquement. Si une installation ou un lancement de jeu a commencé, le redémarrage attend le prochain lancement du launcher ou le bouton Installer et redémarrer. Les jeux et les réglages sont conservés.
-
-AUTRES NOUVEAUTÉS DEPUIS LA 0.4.36
-
-- Bibliothèque avec jaquettes haute définition, recherche et filtres. Les jeux à installer sont grisés ; les jeux installés ont un voile bleu, blanc, rouge et un contour bleu au survol.
-- Choix des modes disponibles lors de l'installation et possibilité de retirer un mode pour récupérer de l'espace, tout en conservant les fichiers partagés et personnels. La campagne de Call of Duty 4 est proposée séparément du multijoueur.
-- Affichage du volume à télécharger et de l'espace disque disponible dans le dossier choisi.
-- Détection automatique d'une source qBittorrent sur le même PC.
-- Partage torrent après installation, activé par défaut pour les nouveaux profils. Un choix existant est conservé ; l'option peut être désactivée dans Paramètres et le partage arrêté par jeu dans Téléchargements. Le moteur indépendant garde une icône près de l’horloge et continue après fermeture du launcher.
-- Onglet Discord avec lien vers la communauté et estimations des membres et membres en ligne, actualisées chaque minute.
-- Compteur des téléchargements Windows du launcher et petites vignettes par jeu pour les installations terminées signalées depuis la 0.4.45. Les réparations ne recomptent pas la même installation ; les anciens téléchargements des jeux ne sont pas reconstitués.
-- Nom complet « Ozuro Launcher » dans les actualités et le total ; vignette MW3 « IW5 / IW5-MOD ».
-
-Le tracker fonctionne en HTTPS sur Cloudflare Workers. Les transferts restent directs entre participants.
-Les limites et le fonctionnement des compteurs sont détaillés dans SECURITE.md.
-
-Validation du changement : 9 tests ciblés, un transfert local avec le moteur Windows compilé après arrêt forcé du launcher, et 286 contrôles de l’interface réussis. Les essais vérifient la valeur Illimité, le retour à une limite choisie et leur enregistrement. Le remplacement et le redémarrage du vrai EXE portable restent vérifiés.
+L’EXE n’est pas signé Authenticode. Vérifier son empreinte dans SHA256SUMS.txt. Les détails figurent dans SECURITE.md.
 
 Téléchargement officiel :
-https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.53-beta.1
-Empreinte : SHA256SUMS.txt.
+https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.54-beta.1
