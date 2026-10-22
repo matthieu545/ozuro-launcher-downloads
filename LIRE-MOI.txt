@@ -1,26 +1,28 @@
-OZURO LAUNCHER — BÊTA 0.4.54-beta.1
+OZURO LAUNCHER — BÊTA 0.4.55-beta.1
 
-Fermer l’ancien launcher puis ouvrir Ozuro-Launcher-0.4.54-beta.1.exe sur Windows 10/11 x64. Les jeux, sources et préférences sont conservés. Les bêta récentes détectent aussi cette version par leur mécanisme de mise à jour au démarrage.
+Fermer l'ancien launcher puis ouvrir Ozuro-Launcher-0.4.55-beta.1.exe sur Windows 10/11 x64. Les jeux, sources et préférences sont conservés. Les bêta récentes détectent aussi cette version par leur mécanisme de mise à jour au démarrage.
 
-TÉLÉCHARGEMENTS TORRENT
+SÉCURITÉ RENFORCÉE
 
-Tous les jeux torrent utilisent le moteur intégré : qBittorrent n’est pas nécessaire chez les joueurs. Les annonces HTTP(S) privées passent automatiquement en IPv4. Le propriétaire doit maintenir une source joignable.
+Les commandes locales sont réservées au cadre principal exact du launcher. L'interface reste isolée, sans accès Node et sans permissions sensibles, sous-cadres, fenêtres externes ni téléchargements initiés par Chromium. Les commandes prévues du launcher continuent de fonctionner.
 
-La communication avec le moteur local utilise une connexion IPv4 directe. Si elle reste sans réponse après les tentatives de lecture, Ozuro confirme l’arrêt de l’ancien processus puis tente une seule reprise avec le même cache et les mêmes modes. Une pause demandée par le joueur annule cette reprise. Une panne persistante conserve les fichiers et affiche une erreur ; aucune boucle de relance infinie n’est ajoutée.
+Le contrôle d'Ozuro Partage reste sur la boucle locale avec un secret aléatoire. Il refuse également les requêtes de contrôle venant d'un navigateur et les en-têtes Host inattendus ; les connexions et délais sont bornés.
 
-Les grandes sélections de modes demandent moins souvent le détail de chaque fichier. Les informations légères de vitesse et de connexion restent actualisées. Un deuxième moteur du launcher ne peut pas ouvrir le même cache actif dans son processus.
+Avant réutilisation, tous les fichiers du moteur indépendant sont comparés au paquet courant, y compris les DLL et ressources natives. Les réglages utilisent des fichiers temporaires uniques, des écritures sérialisées et des contrôles de liens et jonctions.
 
-Le secours HTTPS est disponible seulement si le propriétaire configure un miroir publié, lié à l’empreinte du torrent. Aucun miroir réel n’est activé dans cette publication.
+Les nouveaux journaux et les diagnostics exportés masquent les URL sensibles, les formes usuelles de jetons, les profils Windows et les adresses IP hors boucle locale. Relire un diagnostic avant de le partager reste nécessaire pour tout autre texte personnel.
 
-PARTAGE ET LIMITES
+TÉLÉCHARGEMENT ET PARTAGE
 
-Ozuro Partage continue de partager les caches vérifiés après fermeture du launcher, avec un envoi illimité par défaut pour les nouveaux profils. Les choix existants sont conservés. Le PC doit rester allumé et connecté ; l’icône près de l’horloge permet d’arrêter le partage.
+Le moteur torrent est intégré ; qBittorrent n'est pas nécessaire chez les joueurs. Les annonces HTTP(S) privées passent automatiquement en IPv4. La reprise automatique bornée et le secours HTTPS configuré par l'éditeur restent disponibles ; aucun miroir HTTPS réel n'est activé dans cette publication.
 
-VALIDATION
+Ozuro Partage continue de partager les caches vérifiés après fermeture du launcher, avec un envoi illimité par défaut pour les nouveaux profils. Le PC doit rester allumé et connecté ; l'icône près de l'horloge permet d'arrêter le partage.
 
-221 tests automatisés réussis, 0 échec et 1 test HTTPS public optionnel ignoré. Les essais incluent un torrent synthétique de 2 102 fichiers, une panne du moteur, la reprise des morceaux reçus, les modes non sélectionnés, la pause et l’absence de doubles moteurs. 286 contrôles d’interface et le remplacement/redémarrage du vrai EXE portable sont vérifiés. Ces essais ne constituent pas une installation complète et un lancement de chacun des 13 vrais jeux.
+VALIDATION ET LIMITES
 
-L’EXE n’est pas signé Authenticode. Vérifier son empreinte dans SHA256SUMS.txt. Les détails figurent dans SECURITE.md.
+229 tests automatisés réussis, 0 échec et 1 test HTTPS public optionnel ignoré. 292 contrôles d'interface, le remplacement/redémarrage du vrai EXE portable et le partage synthétique après arrêt forcé du parent sont vérifiés. Aucune vulnérabilité npm connue n'a été signalée dans les dépendances du launcher et du tracker au moment du contrôle.
+
+Ces vérifications ne garantissent pas l'absence de toute vulnérabilité et ne constituent pas un lancement de chacun des 13 vrais jeux. L'EXE n'est pas signé Authenticode. Le durcissement du launcher ne masque pas l'IP du partage et ne remplace pas une configuration VPN adaptée. Voir SECURITE.md et vérifier l'empreinte de l'EXE dans SHA256SUMS.txt.
 
 Téléchargement officiel :
-https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.54-beta.1
+https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.55-beta.1

@@ -1,49 +1,58 @@
-# Sécurité de la bêta 0.4.54-beta.1
+# Sécurité et limites — 0.4.55-beta.1
 
-## Mise à jour automatique de l’application
+Cette bêta corrige la protection des fichiers personnels, vérifie les fichiers Drive contre un manifeste de publication et durcit le paquet Electron. Elle ne certifie pas les EXE/DLL de tous les jeux ou leurs mises à jour tierces.
 
-À chaque démarrage, le launcher portable consulte les versions du seul dépôt officiel. Les brouillons et les versions plus anciennes sont ignorés. Les préversions sont acceptées pour les utilisateurs de la bêta ; une version stable ne bascule pas automatiquement vers une bêta. Le téléchargement exige une origine GitHub HTTPS autorisée, une taille attendue et une empreinte SHA-256 publiée par GitHub. Le fichier est également contrôlé comme EXE Windows.
+## Durcissement de la version 0.4.55
 
-Un helper compilé localement attend la fermeture du launcher et de son parent portable, vérifie les empreintes et remplace seulement l’EXE à son emplacement. Une copie .previous.exe est conservée. Le nouveau launcher confirme son démarrage ; en cas d’échec, le helper tente de restaurer et de relancer la version précédente. Un fichier verrouillé ou un dossier non modifiable ne déclenche pas d’élévation. Un échec déjà constaté n’est pas retenté automatiquement à chaque lancement. Les profils, jeux et sources ne sont pas remplacés.
+- Toutes les commandes IPC exigent le processus d'interface attendu, son cadre principal exact et l'URL locale du launcher. Un sous-cadre avec la même URL ne peut pas emprunter les droits de la fenêtre principale.
+- Le bac à sable est activé globalement. L'intégration Node, les webviews, les sous-cadres, les workers web, les fenêtres externes, les téléchargements initiés par Chromium et les permissions de caméra, microphone, écran, périphériques et géolocalisation sont refusés. Les liens externes prévus continuent de passer par les commandes du processus principal.
+- Le contrôle du partage reste exclusivement sur `127.0.0.1`, avec un secret aléatoire de 256 bits comparé en temps constant. Il exige maintenant le bon en-tête Host et refuse les requêtes Origin/Sec-Fetch-Site des navigateurs. Taille des requêtes, connexions et délais sont bornés.
+- La réutilisation d'Ozuro Partage revérifie tous les fichiers du moteur contre le paquet courant, y compris les DLL et instantanés V8. Un ajout, une modification ou une absence entraîne une nouvelle copie vérifiée. Cela ne protège pas contre un logiciel malveillant ayant déjà les mêmes droits et pouvant modifier les fichiers après leur contrôle.
+- Les réglages et reçus JSON utilisent un fichier temporaire unique créé exclusivement. Les écritures vers un même fichier sont sérialisées, et les chemins comportant une jonction ou un lien symbolique sont refusés. Les alias de périphériques Windows supplémentaires sont également refusés dans les noms téléchargés.
+- Les nouveaux journaux filtrent les URL sensibles, les formes usuelles de jetons, les chemins de profil Windows et les adresses IP hors boucle locale. L'export applique à nouveau ce filtre aux anciens journaux et aux données structurées. Il faut toujours relire un diagnostic avant de le partager : un texte libre peut contenir d'autres informations personnelles.
 
-Les versions jusqu’à 0.4.48 doivent être remplacées manuellement une dernière fois : leur transport Electron refuse les redirections du téléchargement GitHub. La 0.4.49 utilise net.request et valide chaque nouvelle origine avant de la contacter, avec une session en mémoire sans identifiants ni cookies.
+Ces contrôles sont des défenses vérifiées par tests, pas une garantie d'absence de toute vulnérabilité. Le moteur torrent, l'extraction, les mises à jour et les prérequis conservent leurs contrôles d'intégrité existants. Aucun réglage antivirus, VPN, pare-feu ou routeur n'est désactivé par cette version.
 
-## Récupération du moteur en 0.4.54
+Références : [recommandations Electron](https://www.electronjs.org/docs/latest/tutorial/security), [noms réservés Windows](https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file).
 
-Les commandes locales passent directement par 127.0.0.1, sans proxy ni redirection HTTP. Une panne RPC peut provoquer une seule reprise automatique, uniquement après arrêt confirmé du processus précédent. Le cache et les modes sont conservés. Une pause annule la reprise ; un processus encore actif empêche le redémarrage et un nouveau téléchargement dans le même cache à l’intérieur du processus du launcher. Le secours HTTPS exige une configuration explicite associée à l’infohash et une validation TLS ; aucun miroir réel n’est activé.
+## Réglages et sauvegardes
 
-## Correctif du tracker en 0.4.48
+MW2/MW3 ont une politique liée à leur torrent exact : les configurations absentes sont initialisées, les configurations existantes sont conservées et les statistiques, sauvegardes et caches personnels de l’auteur sont omis. Les anciens reçus sont nettoyés avant réparation. Les chemins personnels connus, dont `players2`, restent protégés pour les sources importées, les superpositions Drive et la désinstallation.
 
-Les annonces HTTP(S) privées du moteur aria2 utilisent IPv4 et un délai de connexion borné, conformément au tracker actuel. Ce correctif reste inclus dans la 0.4.49. Une connexion au tracker réussie ne garantit pas que deux clients puissent établir une connexion directe : un NAT ou un VPN sans port entrant peut encore empêcher le transfert.
+## Références Drive
 
-## Moteur de partage indépendant
+La taille et le SHA-256 de chaque fichier doivent figurer dans un manifeste livré par un éditeur de confiance. COD2 utilise 94 références embarquées dans le catalogue de publication. Le launcher vérifie les octets reçus avant remplacement ou extraction, ainsi que les caches réutilisés. Une divergence supprime la copie temporaire et conserve le fichier installé. Les anciens reçus ne constituent plus une référence d’authenticité.
 
-Ozuro Partage est un processus distinct, avec une copie du runtime Electron contrôlée par empreintes et conservant la validation ASAR et les fuses. Il ne crée ni service Windows, ni tâche planifiée, ni démarrage automatique avec Windows. Une icône visible dans la zone de notification permet de l’arrêter. Il utilise le même chemin aria2 que le launcher, sans modifier les règles VPN, le pare-feu ou qBittorrent. La commande locale écoute uniquement 127.0.0.1 et exige un jeton aléatoire, des requêtes JSON et des caches torrent validés. L’interface se reconnecte au moteur existant. Les désactivations et limites existantes sont conservées.
+Pour une source personnalisée, importer un manifeste obtenu indépendamment du stockage Drive modifiable. Un manifeste inconnu ou calculé à partir de fichiers déjà compromis ne prouve pas leur authenticité. Les anciennes sources Drive sans empreintes sont refusées avec un message explicite ; les sources torrent intégrées continuent à fonctionner.
 
-Fermer le launcher conserve les partages déjà démarrés ; terminer le moteur ou l’ensemble de ses processus les arrête. La réception de jeux reste gérée par le launcher. La veille ou l’arrêt du PC interrompt les échanges.
+L’éditeur peut compléter une liste Drive avec les empreintes de ses originaux :
 
-## Limite d’envoi
+```powershell
+node tools/hash-drive-manifest.cjs liste-drive.json "C:\Publication-originale" publication-sha256.json
+```
 
-Les nouveaux profils utilisent la valeur zéro d’aria2, qui signifie un envoi sans plafond logiciel. Les réglages limités existants et les désactivations sont conservés. Les paramètres permettent de choisir Illimité, 256 Ko/s, 1 Mo/s ou 5 Mo/s. Le débit effectif reste lié à la connexion et aux participants.
+L’outil conserve la liste d’origine et crée un nouveau fichier. Pour une archive, utiliser `folderId: "archive:ID1:ID2"`, dans l’ordre des liens, et une entrée par volume, avec l’ID Drive, son chemin local, sa taille, sa date et son SHA-256. Le bouton d’importation accepte aussi les manifestes d’archives. Le script Apps Script exporte une liste ; seul l’outil local ajoute les références d’intégrité. Le secours par archives du navigateur vérifie aussi le manifeste de publication lorsqu’il existe. Sans ce manifeste, une archive choisie manuellement est une source explicitement approuvée par l’utilisateur ; son empreinte locale contrôle la copie, pas l’identité de son éditeur.
 
-## Torrent et conservation des fichiers
+## Paquet Windows
 
-Le tracker est hébergé sur Cloudflare Workers en HTTPS. Il communique les adresses des participants ; les fichiers des jeux ne transitent pas par Workers. Les sources de téléchargement intégrées à l'EXE sont extractibles : une clé commune ne constitue pas une authentification individuelle.
+Electron 44.9.0 est figé dans le verrou npm. Les fuses désactivent `RunAsNode`, `NODE_OPTIONS`, les arguments d’inspection Node et les privilèges supplémentaires `file://`. Les cookies sont chiffrés ; seul `app.asar` peut charger l’application et son intégrité doit correspondre aux métadonnées de l’EXE. Les protections renderer/IPC et les contrôles de chemins restent actifs.
 
-Le partage après installation utilise le cache torrent original, avec vérification des morceaux, et uniquement les modes sélectionnés. Il n'ajoute pas les sauvegardes ni les fichiers personnels du dossier de jeu au torrent. Un cache incomplet ou modifié arrête le partage sans téléchargement automatique de réparation. Le moteur indépendant continue après fermeture du launcher. Le partage peut être désactivé dans Paramètres, arrêté par jeu ou terminé via l’icône du moteur près de l’horloge.
+L’override ciblé de `global-agent` 4.1.3 supprime la dépendance à la chaîne `roarr`/`sprintf-js` signalée par npm, sans rétrograder electron-builder. Cet outil n’est pas livré comme dépendance applicative.
 
-Les participants torrent voient l'adresse de sortie du client. Pour masquer l'IP domestique, le VPN doit couvrir qBittorrent et aria2. Déplacer le tracker n'efface pas une IP déjà connue ; une ancienne adresse DNS, une adresse d'administration distante ou un historique DNS peuvent toujours révéler l'IP de la box. Le launcher ne configure pas le VPN ni la Freebox.
+**Authenticode reste à finaliser.** Aucun certificat de signature de code n’est configuré. Les fuses et SHA-256 ne remplacent pas une identité d’éditeur signée ; un attaquant contrôlant toute la distribution pourrait remplacer l’EXE lui-même.
 
-## Discord et compteurs
+Avec un certificat Authenticode légitime, fournir `CSC_LINK` et, si nécessaire, `CSC_KEY_PASSWORD` via l’environnement sécurisé de compilation, puis lancer `npm run build:signed`. La configuration impose une signature SHA-256 et échoue si les éléments de signature manquent ; elle ne crée aucun certificat autosigné. Ne jamais placer de clé privée ou de mot de passe dans Git. Vérifier la signature et l’horodatage de l’EXE final avant publication.
 
-Les effectifs du Discord sont les estimations publiques de l'invitation. Le total du launcher additionne les téléchargements des EXE Windows dans les versions du dépôt officiel ; il ne mesure pas les personnes uniques. Ces valeurs sont mises en cache et peuvent être légèrement décalées.
+## Tracker HTTPS sur Cloudflare Workers
 
-Les compteurs par jeu reçoivent uniquement l'identifiant du jeu et un identifiant aléatoire d'installation. Aucun nom de compte, chemin local, sauvegarde ou fichier personnel n'est envoyé. Les réparations et nouvelles tentatives de la même installation ne créent pas un second comptage. Les anciens téléchargements ne sont pas reconstitués. Comme tout service Internet, le serveur reçoit l'adresse de connexion ; pour limiter les abus, il conserve temporairement une empreinte salée quotidienne, sans stocker l'IP brute dans sa base. Les requêtes sortantes utilisent la connexion du launcher.
+**Les torrents intégrés utilisent HTTPS et un tracker hébergé directement sur Cloudflare Workers**, avec un registre Durable Objects SQLite partagé, une expiration des pairs et des limites de requêtes. Aucun fichier des jeux ne transite par Workers. Les URL de prévisualisation et les logs d'observabilité sont désactivés ; la configuration opérationnelle est livrée au Worker comme secret Cloudflare et n'est pas versionnée.
 
-## Validation et limites
+Le Worker retient l'adresse IPv4 fournie à l'entrée par Cloudflare et ignore les indications `ip`, `ipv6` ou `X-Forwarded-For` du client. Il ne résout jamais l'ancien DNS domestique. Les clients IPv6 seuls ne sont pas pris en charge dans cette première version. Le plan Workers Free est soumis à quotas : un dépassement peut interrompre les annonces jusqu'au renouvellement du quota.
 
-- La suite complète compte 221 tests réussis, 0 échec et 1 test HTTPS public optionnel ignoré. Les cas couvrent la reprise d’un torrent synthétique de 2 102 fichiers, les modes, la pause et les doubles moteurs. 286 contrôles d’interface et le remplacement/redémarrage du vrai EXE portable sont vérifiés avec un profil isolé.
-- Les 66 fichiers intégrés contrôlés correspondent aux sources ; l'intégrité ASAR et les fuses Electron sont vérifiés. Les fonctions d'injection Node restent désactivées.
-- L'EXE est non signé Authenticode. Son empreinte SHA-256 vérifie les octets téléchargés ; elle ne remplace pas une signature Windows ni une source de confiance.
-- Les quotas et la disponibilité des fournisseurs peuvent interrompre le tracker ou les compteurs. Le tracker gère IPv4.
-- Ces contrôles concernent le launcher ; ils ne certifient pas chaque jeu, DLL, mod ou mise à jour tierce. Aucun vrai jeu n'a été exécuté pendant ces essais et aucun transfert entre deux réseaux distincts n'est certifié par cette publication.
+**L'accès individuel reste à finaliser.** Le catalogue distribué contient une clé commune extractible. Le mode privé réduit la découverte publique ; il ne réserve pas techniquement les fichiers aux exécutables Ozuro et ne masque pas les adresses de sortie des pairs. Le Worker accepte aussi des autorisations individuelles désactivables et limitées à certains torrents, mais le système d'identification et de délivrance de ces autorisations n'existe pas encore.
+
+La migration modifie uniquement les annonces, en conservant les dictionnaires `info` et leurs empreintes : les morceaux, les modes, les reçus et caches restent compatibles. Les sources personnalisées ne sont pas réécrites. L'opérateur doit retirer l'ancien service, son démarrage automatique, sa redirection de port et le DNS qui pointait vers sa box. Une ancienne IP déjà diffusée et les historiques DNS ne disparaissent pas.
+
+Le VPN doit couvrir qBittorrent et le moteur aria2 du launcher si l'opérateur souhaite masquer l'adresse domestique aux participants. Un port fermé ne protège pas la ligne contre une saturation réseau. Les tests du tracker et du launcher ne garantissent pas la capacité d'envoi entre deux utilisateurs derrière des réseaux qui bloquent les connexions entrantes.
+
+Même une autorisation individuelle ne peut empêcher un utilisateur autorisé de recopier les fichiers qu’il reçoit.

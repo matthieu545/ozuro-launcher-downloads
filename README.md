@@ -4,9 +4,9 @@ Launcher Windows en français, aux couleurs bleu, blanc, rouge.
 
 ## Télécharger
 
-[Télécharger Ozuro Launcher 0.4.54-beta.1 pour Windows](https://github.com/matthieu545/ozuro-launcher-downloads/releases/download/v0.4.54-beta.1/Ozuro-Launcher-0.4.54-beta.1.exe).
+[Télécharger Ozuro Launcher 0.4.55-beta.1 pour Windows](https://github.com/matthieu545/ozuro-launcher-downloads/releases/download/v0.4.55-beta.1/Ozuro-Launcher-0.4.55-beta.1.exe).
 
-**Version bêta — destinée aux tests.** Le fichier portable suffit ; aucun jeu n'est inclus dans l'EXE. La [page de cette préversion](https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.54-beta.1) contient l'EXE, sa notice et son empreinte SHA-256. Les versions précédentes restent dans [Releases](https://github.com/matthieu545/ozuro-launcher-downloads/releases).
+**Version bêta — destinée aux tests.** Le fichier portable suffit ; aucun jeu n'est inclus dans l'EXE. La [page de cette préversion](https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.55-beta.1) contient l'EXE, sa notice et son empreinte SHA-256. Les versions précédentes restent dans [Releases](https://github.com/matthieu545/ozuro-launcher-downloads/releases).
 
 ![Bibliothèque Ozuro Launcher](docs/images/launcher.png)
 
@@ -20,6 +20,11 @@ Launcher Windows en français, aux couleurs bleu, blanc, rouge.
 Les préférences restent dans le dossier historique **%APPDATA%\FR Launcher** et les jeux déjà installés sont conservés. Les téléchargements dépendent de la disponibilité des sources et des joueurs qui partagent les fichiers. Les prérequis Microsoft manquants sont détectés par le launcher ; Windows peut demander une autorisation pour les installer.
 
 ## Nouveautés depuis la 0.4.36
+
+- Commandes locales et interface davantage isolées ; permissions sensibles, sous-cadres et requêtes de contrôle venant d’un navigateur refusés.
+- Liens sensibles, jetons courants, profils Windows et adresses masqués dans les nouveaux journaux et les diagnostics exportés.
+- Vérification de toutes les bibliothèques et ressources du moteur de partage avant réutilisation ; réglages écrits dans des fichiers temporaires exclusifs.
+
 
 - Reprise automatique unique lorsqu’un moteur torrent ne répond plus, après arrêt confirmé de l’ancien processus, avec conservation des morceaux reçus et des modes choisis.
 - Communication locale du moteur par une connexion IPv4 directe. Les annonces privées restent automatiquement en IPv4, sans installer ni régler qBittorrent chez les joueurs.
