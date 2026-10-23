@@ -1,4 +1,4 @@
-# Sécurité et limites — 0.4.56-beta.1
+# Sécurité et limites — 0.4.57-beta.1
 
 Cette bêta corrige la protection des fichiers personnels, vérifie les fichiers Drive contre un manifeste de publication et durcit le paquet Electron. Elle ne certifie pas les EXE/DLL de tous les jeux ou leurs mises à jour tierces.
 

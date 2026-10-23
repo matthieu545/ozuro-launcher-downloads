@@ -1,19 +1,25 @@
-OZURO LAUNCHER — BÊTA 0.4.56-beta.1
+OZURO LAUNCHER — BÊTA 0.4.57-beta.1
 
-Fermer l'ancien launcher puis ouvrir Ozuro-Launcher-0.4.56-beta.1.exe sur Windows 10/11 x64. Les jeux, sources, préférences et caches sont conservés. Les bêta récentes proposent aussi la mise à jour au démarrage.
+Fermer l'ancien launcher puis ouvrir Ozuro-Launcher-0.4.57-beta.1.exe sur Windows 10/11 x64. Les jeux, sources, préférences et caches sont conservés. Les bêta récentes proposent aussi cette mise à jour au démarrage.
 
-CORRECTION DU MOTEUR TORRENT
+AIDE APRÈS INSTALLATION DE MODERN WARFARE
 
-Cette version utilise l'allocation creuse des fichiers sur Windows. Cela évite le remplissage physique des grands espaces vides quand les morceaux torrent arrivent dans le désordre, y compris à la frontière d'un mode non sélectionné. La reprise conserve les octets déjà présents.
+Une aide est disponible après l'installation de Call of Duty 4 · Modern Warfare, dans Téléchargements et dans la fiche du jeu installé :
+1. Lancer le multijoueur, puis ouvrir Options → Game Options → Enter Key Code.
+2. Entrer l'un des codes présentés dans la vidéo, puis valider.
+3. Si le jeu affiche « La clé semble valide », la clé a été acceptée.
 
-Le diagnostic étudié montrait une source complète et des données reçues, puis un moteur local sans réponse. Ce correctif traite une cause possible liée aux écritures disque ; le résultat sur le PC concerné reste à confirmer par un nouveau téléchargement. Il ne crée pas de source ni de connectivité entrante.
+Le bouton « Voir la vidéo sur YouTube » ouvre uniquement ce lien, sur demande, dans le navigateur :
+https://www.youtube.com/watch?v=CQRDyJh-P4I
 
-Les joueurs n'ont pas besoin d'installer qBittorrent. L'envoi est illimité par défaut pour les nouveaux profils et les limites déjà choisies sont conservées. Les contrôles d'intégrité des téléchargements et les protections de la version 0.4.55 restent actifs. Aucun miroir HTTPS réel n'est activé.
+Aucune vidéo n'est chargée automatiquement dans le launcher et aucune clé n'est saisie ou enregistrée par Ozuro. Cette aide concerne Modern Warfare (COD4), pas Modern Warfare 2 ou 3. L'acceptation de la clé par le jeu est distincte d'un test de connexion à chaque serveur.
+
+L'allocation creuse des torrents de la 0.4.56 et les protections de la 0.4.55 restent actives. Aucun miroir HTTPS réel n'est activé. qBittorrent n'est pas nécessaire chez les joueurs.
 
 VALIDATION
 
-231 tests automatisés réussis, 0 échec et 1 test HTTPS public optionnel ignoré. Deux tests Windows couvrent des voisins de 64 Mio et 8 Gio : fichiers creux, allocation physique inférieure à 1 Mio, données existantes conservées, reprise sans retransfert et aucune nouvelle tentative RPC. 292 contrôles d'interface, remplacement/redémarrage du portable et partage après arrêt forcé du parent sont vérifiés sur cette version.
+27 tests ciblés de sécurité et de mise à jour réussis, 0 échec. 303 contrôles d'interface vérifiés, dont l'aide masquée avant installation, visible après installation, la navigation vers le lien exact depuis les deux emplacements et l'affichage compact. Le paquet, les protections Electron, le remplacement/redémarrage du portable et le partage après arrêt forcé du parent sont vérifiés.
 
-Ces vérifications ne sont pas un lancement de chaque vrai jeu ni une confirmation sur le PC du joueur. L'EXE n'est pas signé Authenticode. Voir SECURITE.md et vérifier l'empreinte dans SHA256SUMS.txt.
+Cette version ne modifie pas le moteur torrent et ne relance pas la suite complète de 231 tests validée en 0.4.56. Aucun vrai jeu n'a été lancé pour ces contrôles. Le contenu de la vidéo et la validité des codes proposés n'ont pas été vérifiés. L'EXE n'est pas signé Authenticode. Voir SECURITE.md et vérifier SHA256SUMS.txt.
 
-https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.56-beta.1
+https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.57-beta.1
