@@ -1,25 +1,23 @@
-OZURO LAUNCHER — BÊTA 0.4.57-beta.1
+OZURO LAUNCHER — BÊTA 0.4.58-beta.1
 
-Fermer l'ancien launcher puis ouvrir Ozuro-Launcher-0.4.57-beta.1.exe sur Windows 10/11 x64. Les jeux, sources, préférences et caches sont conservés. Les bêta récentes proposent aussi cette mise à jour au démarrage.
+Fermer l'ancien launcher puis ouvrir Ozuro-Launcher-0.4.58-beta.1.exe sur Windows 10/11 x64. Les jeux, sources, préférences et caches sont conservés. Les bêta récentes proposent aussi cette mise à jour au démarrage.
 
-AIDE APRÈS INSTALLATION DE MODERN WARFARE
+COD2 FR : TORRENT EN PRIORITÉ ET DRIVE EN SECOURS
 
-Une aide est disponible après l'installation de Call of Duty 4 · Modern Warfare, dans Téléchargements et dans la fiche du jeu installé :
-1. Lancer le multijoueur, puis ouvrir Options → Game Options → Enter Key Code.
-2. Entrer l'un des codes présentés dans la vidéo, puis valider.
-3. Si le jeu affiche « La clé semble valide », la clé a été acceptée.
+Call of Duty 2 FR utilise désormais un torrent privé avec le tracker HTTPS d'Ozuro. Si le torrent échoue, Google Drive prend le relais. qBittorrent n'est pas nécessaire chez les joueurs.
 
-Le bouton « Voir la vidéo sur YouTube » ouvre uniquement ce lien, sur demande, dans le navigateur :
-https://www.youtube.com/watch?v=CQRDyJh-P4I
+Le choix campagne seule, multijoueur seul ou les deux est conservé dans les deux sources. Le secours Drive utilise ses propres identifiants et références SHA-256, liés au torrent publié ; une répartition ou une empreinte incohérente est refusée.
 
-Aucune vidéo n'est chargée automatiquement dans le launcher et aucune clé n'est saisie ou enregistrée par Ozuro. Cette aide concerne Modern Warfare (COD4), pas Modern Warfare 2 ou 3. L'acceptation de la clé par le jeu est distincte d'un test de connexion à chaque serveur.
+Les 94 fichiers du jeu correspondent à la version française de référence. Le profil de l'auteur, ses sauvegardes, son cache de serveurs et son cache de mémoire ne figurent pas dans le nouveau torrent. Les originaux chez l'auteur sont conservés.
 
-L'allocation creuse des torrents de la 0.4.56 et les protections de la 0.4.55 restent actives. Aucun miroir HTTPS réel n'est activé. qBittorrent n'est pas nécessaire chez les joueurs.
+La mise à jour remplace uniquement les anciennes configurations par défaut reconnues. Les sources personnalisées sont conservées. Les protections précédentes et l'aide YouTube de Modern Warfare restent disponibles.
 
 VALIDATION
 
-27 tests ciblés de sécurité et de mise à jour réussis, 0 échec. 303 contrôles d'interface vérifiés, dont l'aide masquée avant installation, visible après installation, la navigation vers le lien exact depuis les deux emplacements et l'affichage compact. Le paquet, les protections Electron, le remplacement/redémarrage du portable et le partage après arrêt forcé du parent sont vérifiés.
+237 cas de test validés : 236 dans la suite complète, puis le contrôle de catalogue actualisé pour 13 torrents rejoué avec succès. 1 test HTTPS public optionnel ignoré. 303 contrôles d'interface, le contenu du paquet, ses fuses Electron, le remplacement/redémarrage du portable et le partage indépendant sont vérifiés.
 
-Cette version ne modifie pas le moteur torrent et ne relance pas la suite complète de 231 tests validée en 0.4.56. Aucun vrai jeu n'a été lancé pour ces contrôles. Le contenu de la vidéo et la validité des codes proposés n'ont pas été vérifiés. L'EXE n'est pas signé Authenticode. Voir SECURITE.md et vérifier SHA256SUMS.txt.
+Les 94 fichiers originaux ont été comparés aux références SHA-256 de publication. La source qBittorrent annonce ses 3 508 morceaux complets ; le tracker accepte le nouveau torrent et un téléchargement réel de trois fichiers avec le moteur intégré a été vérifié contre les références Drive. Cela ne constitue pas un lancement du jeu ou une validation depuis toutes les connexions Internet.
 
-https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.57-beta.1
+L'EXE n'est pas signé Authenticode. Voir SECURITE.md et vérifier l'empreinte dans SHA256SUMS.txt.
+
+https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.58-beta.1
