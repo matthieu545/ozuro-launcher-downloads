@@ -1,23 +1,21 @@
-OZURO LAUNCHER — BÊTA 0.4.58-beta.1
+OZURO LAUNCHER — BÊTA 0.4.59-beta.1
 
-Fermer l'ancien launcher puis ouvrir Ozuro-Launcher-0.4.58-beta.1.exe sur Windows 10/11 x64. Les jeux, sources, préférences et caches sont conservés. Les bêta récentes proposent aussi cette mise à jour au démarrage.
+Fermer l’ancien launcher puis ouvrir Ozuro-Launcher-0.4.59-beta.1.exe sur Windows 10/11 x64. Les jeux, sources, préférences et caches sont conservés. Les bêta récentes proposent aussi cette mise à jour au démarrage.
 
-COD2 FR : TORRENT EN PRIORITÉ ET DRIVE EN SECOURS
+INTERFACE DE DÉSINSTALLATION
 
-Call of Duty 2 FR utilise désormais un torrent privé avec le tracker HTTPS d'Ozuro. Si le torrent échoue, Google Drive prend le relais. qBittorrent n'est pas nécessaire chez les joueurs.
+La confirmation Windows est remplacée par une fenêtre aux couleurs d’Ozuro, avec le nom du jeu, le dossier concerné et le rappel de la conservation des sauvegardes, des profils et des fichiers personnels. Le bouton « Conserver le jeu » est sélectionné par défaut ; Échap et la croix annulent.
 
-Le choix campagne seule, multijoueur seul ou les deux est conservé dans les deux sources. Le secours Drive utilise ses propres identifiants et références SHA-256, liés au torrent publié ; une répartition ou une empreinte incohérente est refusée.
+La confirmation reste dans une fenêtre indépendante, contrôlée par le processus principal et isolée du reste de l’interface. Les commandes venant d’une autre fenêtre ou d’un sous-cadre sont refusées. Le launcher ne supprime que les fichiers suivis par son reçu d’installation ; les installations importées restent protégées.
 
-Les 94 fichiers du jeu correspondent à la version française de référence. Le profil de l'auteur, ses sauvegardes, son cache de serveurs et son cache de mémoire ne figurent pas dans le nouveau torrent. Les originaux chez l'auteur sont conservés.
-
-La mise à jour remplace uniquement les anciennes configurations par défaut reconnues. Les sources personnalisées sont conservées. Les protections précédentes et l'aide YouTube de Modern Warfare restent disponibles.
+Le bandeau bleu, blanc, rouge au-dessus du logo latéral occupe maintenant toute la ligne.
 
 VALIDATION
 
-237 cas de test validés : 236 dans la suite complète, puis le contrôle de catalogue actualisé pour 13 torrents rejoué avec succès. 1 test HTTPS public optionnel ignoré. 303 contrôles d'interface, le contenu du paquet, ses fuses Electron, le remplacement/redémarrage du portable et le partage indépendant sont vérifiés.
+243 tests réussis, 1 test optionnel ignoré ; 312 contrôles dans l’application compilée. L’annulation, Échap, la croix, la confirmation et la conservation des fichiers personnels ont été vérifiés sur des données de test isolées. Aucun jeu personnel n’a été désinstallé pendant ces contrôles.
 
-Les 94 fichiers originaux ont été comparés aux références SHA-256 de publication. La source qBittorrent annonce ses 3 508 morceaux complets ; le tracker accepte le nouveau torrent et un téléchargement réel de trois fichiers avec le moteur intégré a été vérifié contre les références Drive. Cela ne constitue pas un lancement du jeu ou une validation depuis toutes les connexions Internet.
+Les 73 fichiers du paquet correspondent aux sources locales, les protections Electron sont vérifiées. Le remplacement et le redémarrage du portable conservent le profil de test ; le partage indépendant continue après arrêt forcé de son parent. Aucun changement aux sources des jeux ou aux réglages réseau.
 
-L'EXE n'est pas signé Authenticode. Voir SECURITE.md et vérifier l'empreinte dans SHA256SUMS.txt.
+L’EXE n’est pas signé Authenticode. Voir SECURITE.md et vérifier l’empreinte dans SHA256SUMS.txt.
 
-https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.58-beta.1
+https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.59-beta.1
