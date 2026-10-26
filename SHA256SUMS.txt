@@ -1,1 +1,1 @@
-be7dcb3aca58a0dd3b6f612aa627c517d012fec7f2dd40757a40bf8e68dea542  Ozuro-Launcher-0.4.59-beta.1.exe
+3720d6949275d1530ddc699b3ee14cb60312adad510fd0bd48a57b49c697276b  Ozuro-Launcher-0.4.60-beta.1.exe

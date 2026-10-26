@@ -1,21 +1,27 @@
-OZURO LAUNCHER — BÊTA 0.4.59-beta.1
+OZURO LAUNCHER — BÊTA 0.4.60-beta.1
 
-Fermer l’ancien launcher puis ouvrir Ozuro-Launcher-0.4.59-beta.1.exe sur Windows 10/11 x64. Les jeux, sources, préférences et caches sont conservés. Les bêta récentes proposent aussi cette mise à jour au démarrage.
+Fermer l’ancien launcher puis ouvrir Ozuro-Launcher-0.4.60-beta.1.exe sur Windows 10/11 x64. Les jeux, sources, préférences et caches sont conservés. Les bêta récentes proposent cette mise à jour au démarrage.
 
-INTERFACE DE DÉSINSTALLATION
+PRÉPARER PLUTONIUM
 
-La confirmation Windows est remplacée par une fenêtre aux couleurs d’Ozuro, avec le nom du jeu, le dossier concerné et le rappel de la conservation des sauvegardes, des profils et des fichiers personnels. Le bouton « Conserver le jeu » est sélectionné par défaut ; Échap et la croix annulent.
+Le guide est disponible dans les fiches de World at War, Black Ops 1 et Black Ops 2, ainsi qu’après leur installation.
 
-La confirmation reste dans une fenêtre indépendante, contrôlée par le processus principal et isolée du reste de l’interface. Les commandes venant d’une autre fenêtre ou d’un sous-cadre sont refusées. Le launcher ne supprime que les fichiers suivis par son reçu d’installation ; les installations importées restent protégées.
+1. Créer un compte sur https://forum.plutonium.pw/register avec le bouton « Créer mon compte ». À la question sur la franchise, répondre « Call of Duty ». Si le joueur a déjà un compte, passer directement à l’étape 2.
 
-Le bandeau bleu, blanc, rouge au-dessus du logo latéral occupe maintenant toute la ligne.
+2. Cliquer sur « Installer et ouvrir Plutonium ». Ozuro télécharge le launcher depuis son CDN officiel, puis l’ouvre. S’y connecter avec le nom d’utilisateur et le mot de passe du compte du forum. Ozuro ne demande ni ne traite ces identifiants.
+
+Une fois connecté, sélectionner le jeu dans Plutonium. Si SETUP apparaît, sélectionner le dossier indiqué dans la fiche Ozuro, puis cliquer sur PLAY.
+
+Le premier lancement d’un mode Plutonium installe aussi le launcher si nécessaire. Il est commun aux trois jeux. La campagne native de BO2 garde son lancement direct ; Modern Warfare 3 utilise actuellement IW5-MOD et conserve son fonctionnement.
+
+Le téléchargement du launcher est contrôlé par HTTPS, origine officielle, taille, SHA-256 et format Windows. Un fichier modifié ou une redirection hors du CDN officiel est refusé. Une modification officielle de ce fichier pourra nécessiter une nouvelle mise à jour d’Ozuro.
 
 VALIDATION
 
-243 tests réussis, 1 test optionnel ignoré ; 312 contrôles dans l’application compilée. L’annulation, Échap, la croix, la confirmation et la conservation des fichiers personnels ont été vérifiés sur des données de test isolées. Aucun jeu personnel n’a été désinstallé pendant ces contrôles.
+250 tests automatisés réussis, 1 test optionnel ignoré, aucun échec. Les 345 contrôles de l’application compilée sont réussis. Le téléchargement réel de Plutonium et son empreinte ont été vérifiés avec le transport réseau Electron, sans exécuter ce client. L’installation, la réutilisation, l’annulation, l’affichage et les commandes de lancement sont vérifiés avec des données et des processus simulés. Aucune connexion à un compte réel ni partie en jeu n’a été effectuée pendant ces contrôles.
 
-Les 73 fichiers du paquet correspondent aux sources locales, les protections Electron sont vérifiées. Le remplacement et le redémarrage du portable conservent le profil de test ; le partage indépendant continue après arrêt forcé de son parent. Aucun changement aux sources des jeux ou aux réglages réseau.
+Les 74 fichiers du paquet correspondent aux sources, les protections Electron sont vérifiées. Le remplacement et le redémarrage du portable conservent le profil de test ; le partage indépendant continue après arrêt forcé du parent. Aucun jeu personnel ni réglage réseau n’a été modifié.
 
 L’EXE n’est pas signé Authenticode. Voir SECURITE.md et vérifier l’empreinte dans SHA256SUMS.txt.
 
-https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.59-beta.1
+https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.60-beta.1
