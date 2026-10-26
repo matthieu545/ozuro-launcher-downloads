@@ -1,17 +1,22 @@
-OZURO LAUNCHER — BÊTA 0.4.61-beta.1
+OZURO LAUNCHER — BÊTA 0.4.62-beta.1
 
-Fermer l’ancien launcher puis ouvrir Ozuro-Launcher-0.4.61-beta.1.exe sur Windows 10/11 x64. Les jeux et préférences sont conservés.
+Fermer l’ancien launcher puis ouvrir Ozuro-Launcher-0.4.62-beta.1.exe sur Windows 10/11 x64. Les jeux, sources, modes et préférences sont conservés. Les bêta récentes proposent cette mise à jour au démarrage.
 
-CORRECTION DU LIBELLÉ PLUTONIUM
+MODERN WARFARE 3 — PLUTONIUM
 
-L’étape 2 affiche maintenant : « Télécharge le launcher officiel Plutonium. Connecte-toi dans Plutonium avec le nom d’utilisateur et le mot de passe de ton compte du forum. »
+La fiche MW3 affiche maintenant PLUTONIUM. Le jeu apparaît dans le filtre Plutonium avec World at War, Black Ops 1 et Black Ops 2.
 
-Le nom Ozuro a été retiré de cette phrase. Le parcours Plutonium livré en 0.4.60 reste disponible dans les fiches de World at War, Black Ops 1 et Black Ops 2 et après installation.
+Le multijoueur installe si nécessaire et ouvre le launcher officiel Plutonium. La campagne utilise toujours iw5sp.exe. Le guide explique comment créer un compte sur https://forum.plutonium.pw/register (réponse à la question sur la franchise : Call of Duty), installer et ouvrir Plutonium, puis s’y connecter avec le compte du forum. Le dossier MW3 à choisir avec SETUP est indiqué avant PLAY. Les identifiants restent saisis dans Plutonium.
+
+Les anciens réglages par défaut iw5mp.exe passent automatiquement à Plutonium. Les sources, partitions de fichiers et modes installés ne changent pas. Un choix explicite de client, d’exécutables ou d’arguments personnalisés est conservé. Les autres jeux restent inchangés.
 
 VALIDATION
 
-Changement limité à une phrase de l’interface, au numéro de version et à la documentation ; le code fonctionnel est identique au commit 2748e145ee9c1cf01281be6cb88cb5234ad280c7 de la version 0.4.60. Aucun nouveau test unitaire ajouté. Les 345 contrôles de l’application compilée sont réussis ; les 74 fichiers du paquet correspondent aux sources et les protections Electron sont vérifiées.
+252 tests réussis, aucun échec, 1 test optionnel ignoré. Les 349 contrôles de l’application compilée sont réussis, dont le badge, le filtre, le guide MW3, le lancement Plutonium du multijoueur et le lancement natif de la campagne. Les migrations et les configurations personnalisées sont testées. Les 74 fichiers du paquet correspondent aux sources ; les protections Electron, le redémarrage du portable avec conservation du profil et le partage indépendant sont vérifiés.
+
+Les lancements applicatifs ont été simulés ; aucune connexion à un compte réel ni partie en jeu n’a été effectuée. Aucun jeu personnel ni réglage réseau n’a été modifié pendant les contrôles.
 
 L’EXE n’est pas signé Authenticode. Voir SECURITE.md et vérifier l’empreinte dans SHA256SUMS.txt.
 
-https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.61-beta.1
+Documentation Plutonium : https://plutonium.pw/docs/install/#iw5-modern-warfare-3
+https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.62-beta.1

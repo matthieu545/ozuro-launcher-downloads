@@ -4,9 +4,9 @@ Launcher Windows en français, aux couleurs bleu, blanc, rouge.
 
 ## Télécharger
 
-[Télécharger Ozuro Launcher 0.4.61-beta.1 pour Windows](https://github.com/matthieu545/ozuro-launcher-downloads/releases/download/v0.4.61-beta.1/Ozuro-Launcher-0.4.61-beta.1.exe).
+[Télécharger Ozuro Launcher 0.4.62-beta.1 pour Windows](https://github.com/matthieu545/ozuro-launcher-downloads/releases/download/v0.4.62-beta.1/Ozuro-Launcher-0.4.62-beta.1.exe).
 
-**Version bêta — destinée aux tests.** Le fichier portable suffit ; aucun jeu n'est inclus dans l'EXE. La [page de cette préversion](https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.61-beta.1) contient l'EXE, sa notice et son empreinte SHA-256. Les versions précédentes restent dans [Releases](https://github.com/matthieu545/ozuro-launcher-downloads/releases).
+**Version bêta — destinée aux tests.** Le fichier portable suffit ; aucun jeu n'est inclus dans l'EXE. La [page de cette préversion](https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.62-beta.1) contient l'EXE, sa notice et son empreinte SHA-256. Les versions précédentes restent dans [Releases](https://github.com/matthieu545/ozuro-launcher-downloads/releases).
 
 ![Bibliothèque Ozuro Launcher](docs/images/launcher.png)
 
@@ -20,6 +20,8 @@ Launcher Windows en français, aux couleurs bleu, blanc, rouge.
 Les préférences restent dans le dossier historique **%APPDATA%\FR Launcher** et les jeux déjà installés sont conservés. Les téléchargements dépendent de la disponibilité des sources et des joueurs qui partagent les fichiers. Les prérequis Microsoft manquants sont détectés par le launcher ; Windows peut demander une autorisation pour les installer.
 
 ## Nouveautés depuis la 0.4.36
+
+- Modern Warfare 3 utilise Plutonium pour le multijoueur : badge corrigé, guide d’inscription et connexion, installation du launcher officiel. La campagne conserve son lancement natif ; les anciens réglages par défaut sont migrés.
 
 - Libellé de l’étape 2 Plutonium simplifié : « Télécharge le launcher officiel Plutonium ».
 
