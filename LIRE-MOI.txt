@@ -1,22 +1,22 @@
-OZURO LAUNCHER — BÊTA 0.4.62-beta.1
+OZURO LAUNCHER — BÊTA 0.4.63-beta.1
 
-Fermer l’ancien launcher puis ouvrir Ozuro-Launcher-0.4.62-beta.1.exe sur Windows 10/11 x64. Les jeux, sources, modes et préférences sont conservés. Les bêta récentes proposent cette mise à jour au démarrage.
+Fermer l’ancien launcher puis ouvrir Ozuro-Launcher-0.4.63-beta.1.exe sur Windows 10/11 x64. Les jeux, sources et préférences sont conservés. Les bêta récentes proposent cette mise à jour au démarrage.
 
-MODERN WARFARE 3 — PLUTONIUM
+MODERN WARFARE REMASTERED — H1-MOD
 
-La fiche MW3 affiche maintenant PLUTONIUM. Le jeu apparaît dans le filtre Plutonium avec World at War, Black Ops 1 et Black Ops 2.
+Le quatorzième jeu est disponible dans la bibliothèque, avec sa jaquette et le badge H1-MOD. Le téléchargement complet représente 89,18 Go (83,05 Gio) et contient 7 415 fichiers, dont H1-Mod et 138 ressources dans zone/french. Ouvrir H1-Mod puis choisir Campagne ou Multijoueur.
 
-Le multijoueur installe si nécessaire et ouvre le launcher officiel Plutonium. La campagne utilise toujours iw5sp.exe. Le guide explique comment créer un compte sur https://forum.plutonium.pw/register (réponse à la question sur la franchise : Call of Duty), installer et ouvrir Plutonium, puis s’y connecter avec le compte du forum. Le dossier MW3 à choisir avec SETUP est indiqué avant PLAY. Les identifiants restent saisis dans Plutonium.
+Le torrent privé est inscrit sur le tracker Ozuro. Il exclut neuf fichiers du dossier players2 et des journaux H1-Mod, soit 10 024 octets personnels ; les originaux sur le PC qui partage ne sont pas modifiés. Les treize torrents précédents et leurs autorisations sont conservés. Les compteurs prennent en charge ce nouveau jeu.
 
-Les anciens réglages par défaut iw5mp.exe passent automatiquement à Plutonium. Les sources, partitions de fichiers et modes installés ne changent pas. Un choix explicite de client, d’exécutables ou d’arguments personnalisés est conservé. Les autres jeux restent inchangés.
+Le réglage players2/default/language est créé avec la valeur french pour un nouveau profil. Un réglage déjà présent, les sauvegardes et les autres fichiers personnels sont conservés.
 
 VALIDATION
 
-252 tests réussis, aucun échec, 1 test optionnel ignoré. Les 349 contrôles de l’application compilée sont réussis, dont le badge, le filtre, le guide MW3, le lancement Plutonium du multijoueur et le lancement natif de la campagne. Les migrations et les configurations personnalisées sont testées. Les 74 fichiers du paquet correspondent aux sources ; les protections Electron, le redémarrage du portable avec conservation du profil et le partage indépendant sont vérifiés.
+255 tests automatisés réussis, aucun échec, 1 test optionnel ignoré ; 8 tests des services et 358 contrôles de l’application compilée réussis. Les 75 fichiers du paquet et les 14 jaquettes sont contrôlés ; les protections Electron, le redémarrage du portable avec conservation du profil et le partage indépendant sont vérifiés.
 
-Les lancements applicatifs ont été simulés ; aucune connexion à un compte réel ni partie en jeu n’a été effectuée. Aucun jeu personnel ni réglage réseau n’a été modifié pendant les contrôles.
+Le tracker réel accepte la nouvelle source et annonce un partage complet. Le moteur intégré a réellement reçu H1-Mod, le manifeste et une ressource française depuis qBittorrent, soit 10 151 989 octets sélectionnés ; leurs SHA-256 correspondent aux fichiers d’origine. Le transfert est testé sur cette machine et ne garantit pas la joignabilité depuis chaque réseau distant. Aucun vrai jeu n’a été lancé ; les menus, voix et parties restent à confirmer en jeu.
 
-L’EXE n’est pas signé Authenticode. Voir SECURITE.md et vérifier l’empreinte dans SHA256SUMS.txt.
+Les fichiers source et les réglages VPN, réseau et pare-feu sont conservés. L’EXE n’est pas signé Authenticode. Voir SECURITE.md et vérifier l’empreinte dans SHA256SUMS.txt.
 
-Documentation Plutonium : https://plutonium.pw/docs/install/#iw5-modern-warfare-3
-https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.62-beta.1
+Client H1-Mod : https://github.com/auroramod/h1-mod
+https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.63-beta.1
