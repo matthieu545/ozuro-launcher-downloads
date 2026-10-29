@@ -1,6 +1,10 @@
-OZURO LAUNCHER — BÊTA 0.4.63-beta.1
+OZURO LAUNCHER — BÊTA 0.4.67-beta.1
 
-Fermer l’ancien launcher puis ouvrir Ozuro-Launcher-0.4.63-beta.1.exe sur Windows 10/11 x64. Les jeux, sources et préférences sont conservés. Les bêta récentes proposent cette mise à jour au démarrage.
+Fermer l’ancien launcher puis ouvrir Ozuro-Launcher-0.4.67-beta.1.exe sur Windows 10/11 x64. Les jeux, sources et préférences sont conservés. Les bêta récentes proposent cette mise à jour au démarrage.
+
+L'EXE est accompagné d'un fichier .sig Ed25519 que le launcher vérifie automatiquement lors des mises à jour depuis la version 0.4.65-beta.1.
+
+La 0.4.67-beta.1 retire la fenêtre de confirmation du partage au démarrage et précise la visibilité de l'adresse IP dans les paramètres. Les validations détaillées ci-dessous concernent historiquement la 0.4.63-beta.1, pas une nouvelle validation de tous les jeux en 0.4.67.
 
 MODERN WARFARE REMASTERED — H1-MOD
 
@@ -10,7 +14,7 @@ Le torrent privé est inscrit sur le tracker Ozuro. Il exclut neuf fichiers du d
 
 Le réglage players2/default/language est créé avec la valeur french pour un nouveau profil. Un réglage déjà présent, les sauvegardes et les autres fichiers personnels sont conservés.
 
-VALIDATION
+VALIDATION HISTORIQUE DE LA 0.4.63-beta.1
 
 255 tests automatisés réussis, aucun échec, 1 test optionnel ignoré ; 8 tests des services et 358 contrôles de l’application compilée réussis. Les 75 fichiers du paquet et les 14 jaquettes sont contrôlés ; les protections Electron, le redémarrage du portable avec conservation du profil et le partage indépendant sont vérifiés.
 
@@ -19,4 +23,4 @@ Le tracker réel accepte la nouvelle source et annonce un partage complet. Le mo
 Les fichiers source et les réglages VPN, réseau et pare-feu sont conservés. L’EXE n’est pas signé Authenticode. Voir SECURITE.md et vérifier l’empreinte dans SHA256SUMS.txt.
 
 Client H1-Mod : https://github.com/auroramod/h1-mod
-https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.63-beta.1
+https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.67-beta.1

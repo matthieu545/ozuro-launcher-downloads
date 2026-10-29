@@ -4,9 +4,9 @@ Launcher Windows en français, aux couleurs bleu, blanc, rouge.
 
 ## Télécharger
 
-[Télécharger Ozuro Launcher 0.4.63-beta.1 pour Windows](https://github.com/matthieu545/ozuro-launcher-downloads/releases/download/v0.4.63-beta.1/Ozuro-Launcher-0.4.63-beta.1.exe).
+[Télécharger Ozuro Launcher 0.4.67-beta.1 pour Windows](https://github.com/matthieu545/ozuro-launcher-downloads/releases/download/v0.4.67-beta.1/Ozuro-Launcher-0.4.67-beta.1.exe).
 
-**Version bêta — destinée aux tests.** Le fichier portable suffit ; aucun jeu n'est inclus dans l'EXE. La [page de cette préversion](https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.63-beta.1) contient l'EXE, sa notice et son empreinte SHA-256. Les versions précédentes restent dans [Releases](https://github.com/matthieu545/ozuro-launcher-downloads/releases).
+**Version bêta — destinée aux tests.** Le fichier portable suffit ; aucun jeu n'est inclus dans l'EXE. La [page de cette préversion](https://github.com/matthieu545/ozuro-launcher-downloads/releases/tag/v0.4.67-beta.1) contient l'EXE et sa signature .sig ; la notice et l'empreinte SHA-256 sont dans ce dépôt. Les versions précédentes restent dans [Releases](https://github.com/matthieu545/ozuro-launcher-downloads/releases).
 
 ![Bibliothèque Ozuro Launcher](docs/images/launcher.png)
 
@@ -60,7 +60,11 @@ Le tracker reste hébergé sur Cloudflare Workers en HTTPS. Les fichiers s'écha
 
 ## Vérifier le fichier
 
-L'empreinte SHA-256 figure dans [SHA256SUMS.txt](SHA256SUMS.txt) et avec la préversion.
+L'empreinte SHA-256 de l'EXE, lue dans les métadonnées de la release GitHub, figure dans [SHA256SUMS.txt](SHA256SUMS.txt).
+
+L'EXE est accompagné d'un fichier .sig Ed25519 que le launcher vérifie automatiquement lors des mises à jour depuis la version 0.4.65-beta.1.
+
+Cette signature applicative ne remplace pas Authenticode : Windows ne la vérifie pas lors d'un téléchargement manuel.
 
 ## À propos de ce dépôt
 
